@@ -5,16 +5,30 @@
 //  Created by Jannatun Nahar Papia on 7/7/22.
 //
 
+import Foundation
 import SwiftUI
 
-struct QuizModel: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+struct Quiz {
+    
+    var currentQuestionIndex: Int
+    var quizModel: QuizModel
+    var quizCompleted : Bool
+    var quizWinningStatus : Bool = false
+ }
+
+struct QuizModel {
+    var question : String
+    var answer : String
+    var optionList : [QuizOption]
 }
 
-struct QuizModel_Previews: PreviewProvider {
-    static var previews: some View {
-        QuizModel()
-    }
+struct QuizOption : Identifiable {
+    var id : Int
+    var optionId : String
+    var option : String
+    var color : Color
+    var isSelected : Bool = false
+    var isMatched : Bool = false
 }
+
+
