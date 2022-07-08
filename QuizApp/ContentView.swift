@@ -19,21 +19,31 @@ struct ContentView: View {
   //              .ignoresSafeArea()
             
             VStack{
-                Text("Animal Knowledge Quiz!")
-                    .font(.system(size: 30, weight: .bold, design: .rounded))
-                    .foregroundColor(.white)
-                    .shadow(color: Color.black, radius: 2, x: 0, y: 3)
+                ReusebleText(text: "Animal Knowledge Quiz!", size: 30)
                     .padding()
                 
-                Text("My Question")
-                    .font(.system(size: 25, weight: .bold, design: .rounded))
-                    .foregroundColor(.white)
-                    .shadow(color: Color.black, radius: 2, x: 0, y: 3)
+  //              ReusebleText(text: "My Question", size: 25)
+                ReusebleText(text: GameManagerVM().data.question, size: 25)
                     .lineLimit(3)
                     .frame(width: UIScreen.main.bounds.size.width - 20, height: 60, alignment: .center)
                     .multilineTextAlignment(.center)
+//                Text("Animal Knowledge Quiz!")
+//                    .font(.system(size: 30, weight: .bold, design: .rounded))
+//                    .foregroundColor(.white)
+//                    .shadow(color: Color.black, radius: 2, x: 0, y: 3)
+//                    .padding()
+                
+//                Text("My Question")
+//                    .font(.system(size: 25, weight: .bold, design: .rounded))
+//                    .foregroundColor(.white)
+//                    .shadow(color: Color.black, radius: 2, x: 0, y: 3)
+//                    .lineLimit(3)
+//                    .frame(width: UIScreen.main.bounds.size.width - 20, height: 60, alignment: .center)
+//                    .multilineTextAlignment(.center)
                 
                     Spacer()
+                
+                OptionGridView()
             }
         }
     }
@@ -44,3 +54,18 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+
+
+//struct ReusebleText: View {
+//    var text: String
+//    var size: Int
+//    var body: some View {
+//
+//        Text("Animal Knowledge Quiz!")
+//            .font(.system(size: 30, weight: .bold, design: .rounded))
+//            .foregroundColor(.white)
+//            .shadow(color: Color.black, radius: 2, x: 0, y: 3)
+//            .padding()
+//    }
+//}
