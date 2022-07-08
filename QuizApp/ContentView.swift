@@ -8,12 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var gameManagerVM: GameManagerVM
     var body: some View {
         ZStack {
             Image("image")
                 .resizable()
                 .aspectRatio(contentMode: ContentMode.fill)
                 .ignoresSafeArea()
+            
+            if (gameManagerVM.model.quizCompleted) {
+                QuizCompletedView(gameManagerVM: gameManagerVM)
+            }
+            else {
             
 //            LinearGradient(colors: [.purple.opacity(0.4), .blue.opacity(0.4)], startPoint: .topLeading, endPoint: .bottomTrailing)
   //              .ignoresSafeArea()
@@ -23,7 +29,7 @@ struct ContentView: View {
                     .padding()
                 
   //              ReusebleText(text: "My Question", size: 25)
-                ReusebleText(text: GameManagerVM().data.question, size: 25)
+                ReusebleText(text: gameManagerVM.model.quizModel.question, size: 25)
                     .lineLimit(3)
                     .frame(width: UIScreen.main.bounds.size.width - 20, height: 60, alignment: .center)
                     .multilineTextAlignment(.center)
@@ -43,7 +49,8 @@ struct ContentView: View {
                 
                     Spacer()
                 
-                OptionGridView()
+                OptionGridView(gameManagerVM: gameManagerVM)
+            }
             }
         }
     }
@@ -51,7 +58,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(gameManagerVM: GameManagerVM())
     }
 }
 

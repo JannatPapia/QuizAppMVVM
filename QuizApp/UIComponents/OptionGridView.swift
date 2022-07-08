@@ -9,35 +9,38 @@ import SwiftUI
 import Foundation
 
 struct OptionGridView: View {
+    var gameManagerVM : GameManagerVM
     var columns: [GridItem] = Array(repeating: GridItem(.fixed(170), spacing: 0), count: 2)
-    @State var quizRecord = GameManagerVM.quizData[0]
+//    @State private var quizRecord = GameManagerVM.quizData[0]
     var body: some View {
         
         LazyVGrid(columns: columns, spacing: 20) {
-            ForEach(quizRecord.optionList) { quizOption in
+            ForEach(gameManagerVM.model.quizModel.optionList) { quizOption in
+        //    ForEach(quizRecord.optionList) { quizOption in
          //   ForEach(GameManagerVM.quizData[0].optionList) { quizOption in
                 OptionCardView(quizOption: quizOption)
                     .onTapGesture {
-                        verifyAnswer(selectedOption: quizOption)
+                        gameManagerVM.verifyAnswer(selectedOption: quizOption)
+                    //    verifyAnswer(selectedOption: quizOption)
                     }
             }
         }
         
     }
     
-     func verifyAnswer(selectedOption: QuizOption) {
-        
-        if let index = quizRecord.optionList.firstIndex(where: {$0.optionId == selectedOption.optionId}) {
-        if selectedOption.optionId == GameManagerVM.quizData[0].answer {
-            quizRecord.optionList[index].isMatched = true
-            quizRecord.optionList[index].isSelected = true
-        }
-            else {
-                quizRecord.optionList[index].isMatched = false
-                quizRecord.optionList[index].isSelected = true
-            }
-        }
-    }
+//     func verifyAnswer(selectedOption: QuizOption) {
+//        
+//        if let index = quizRecord.optionList.firstIndex(where: {$0.optionId == selectedOption.optionId}) {
+//        if selectedOption.optionId == GameManagerVM.quizData[0].answer {
+//            quizRecord.optionList[index].isMatched = true
+//            quizRecord.optionList[index].isSelected = true
+//        }
+//            else {
+//                quizRecord.optionList[index].isMatched = false
+//                quizRecord.optionList[index].isSelected = true
+//            }
+//        }
+//    }
 }
 
 //struct QuizGridView_Previews: PreviewProvider {

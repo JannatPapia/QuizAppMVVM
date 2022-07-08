@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37277736287812040031B47D /* QuizCompletedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37277735287812040031B47D /* QuizCompletedView.swift */; };
 		378D973D2876BB3C00BDE4FA /* QuizAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378D973C2876BB3C00BDE4FA /* QuizAppApp.swift */; };
 		378D973F2876BB3C00BDE4FA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378D973E2876BB3C00BDE4FA /* ContentView.swift */; };
 		378D97412876BB3E00BDE4FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 378D97402876BB3E00BDE4FA /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		37277735287812040031B47D /* QuizCompletedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCompletedView.swift; sourceTree = "<group>"; };
 		378D97392876BB3C00BDE4FA /* QuizApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		378D973C2876BB3C00BDE4FA /* QuizAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizAppApp.swift; sourceTree = "<group>"; };
 		378D973E2876BB3C00BDE4FA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			children = (
 				378D974F2877159F00BDE4FA /* ReuseableText.swift */,
 				378D97532877213700BDE4FA /* OptionGridView.swift */,
+				37277735287812040031B47D /* QuizCompletedView.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 				378D974E2876BBCF00BDE4FA /* QuizModel.swift in Sources */,
 				378D97522877175100BDE4FA /* GameManagerVM.swift in Sources */,
 				378D973D2876BB3C00BDE4FA /* QuizAppApp.swift in Sources */,
+				37277736287812040031B47D /* QuizCompletedView.swift in Sources */,
 				378D97502877159F00BDE4FA /* ReuseableText.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
