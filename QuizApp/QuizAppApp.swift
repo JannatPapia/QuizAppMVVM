@@ -11,8 +11,10 @@ import SwiftUI
 struct QuizAppApp: App {
     var body: some Scene {
         WindowGroup {
-            TriviaContentView()
+            QuestionView()
+          //  TriviaContentView()
             //   PrimaryButton(text: "Next")
+            //MARK: Preview for quizApp
         //    ContentView(gameManagerVM: GameManagerVM())
         }
     }
