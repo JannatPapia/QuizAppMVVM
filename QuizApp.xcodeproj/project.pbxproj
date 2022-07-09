@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		37277736287812040031B47D /* QuizCompletedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37277735287812040031B47D /* QuizCompletedView.swift */; };
 		3727773A287958990031B47D /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37277739287958990031B47D /* PrimaryButton.swift */; };
+		3727773D28795E0C0031B47D /* TriviaContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3727773C28795E0C0031B47D /* TriviaContentView.swift */; };
+		3727773F287964FC0031B47D /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3727773E287964FC0031B47D /* Extension.swift */; };
 		378D973D2876BB3C00BDE4FA /* QuizAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378D973C2876BB3C00BDE4FA /* QuizAppApp.swift */; };
 		378D973F2876BB3C00BDE4FA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378D973E2876BB3C00BDE4FA /* ContentView.swift */; };
 		378D97412876BB3E00BDE4FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 378D97402876BB3E00BDE4FA /* Assets.xcassets */; };
@@ -22,6 +24,8 @@
 /* Begin PBXFileReference section */
 		37277735287812040031B47D /* QuizCompletedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCompletedView.swift; sourceTree = "<group>"; };
 		37277739287958990031B47D /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		3727773C28795E0C0031B47D /* TriviaContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaContentView.swift; sourceTree = "<group>"; };
+		3727773E287964FC0031B47D /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		378D97392876BB3C00BDE4FA /* QuizApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		378D973C2876BB3C00BDE4FA /* QuizAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizAppApp.swift; sourceTree = "<group>"; };
 		378D973E2876BB3C00BDE4FA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -47,7 +51,9 @@
 		3727773728793C7E0031B47D /* TriviaGameApp */ = {
 			isa = PBXGroup;
 			children = (
+				3727773B28795DE70031B47D /* Views */,
 				372777382879587E0031B47D /* Components */,
+				3727773E287964FC0031B47D /* Extension.swift */,
 			);
 			path = TriviaGameApp;
 			sourceTree = "<group>";
@@ -58,6 +64,14 @@
 				37277739287958990031B47D /* PrimaryButton.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		3727773B28795DE70031B47D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3727773C28795E0C0031B47D /* TriviaContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		378D97302876BB3C00BDE4FA = {
@@ -200,7 +214,9 @@
 				378D974E2876BBCF00BDE4FA /* QuizModel.swift in Sources */,
 				378D97522877175100BDE4FA /* GameManagerVM.swift in Sources */,
 				378D973D2876BB3C00BDE4FA /* QuizAppApp.swift in Sources */,
+				3727773F287964FC0031B47D /* Extension.swift in Sources */,
 				37277736287812040031B47D /* QuizCompletedView.swift in Sources */,
+				3727773D28795E0C0031B47D /* TriviaContentView.swift in Sources */,
 				3727773A287958990031B47D /* PrimaryButton.swift in Sources */,
 				378D97502877159F00BDE4FA /* ReuseableText.swift in Sources */,
 			);
