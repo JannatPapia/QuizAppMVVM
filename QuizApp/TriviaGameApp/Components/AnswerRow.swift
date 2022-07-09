@@ -11,8 +11,8 @@ struct AnswerRow: View {
     var answer: Answer
     @State private var isSelected = false
     
-    var green = Color.green.opacity(0.07)
-    var red = Color.red.opacity(0.07)
+    var green = Color.green
+    var red = Color.red
     
     var body: some View {
         HStack(spacing: 20) {
@@ -29,7 +29,7 @@ struct AnswerRow: View {
             }
         }
         .padding()
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .frame(maxWidth: .infinity, alignment: .leading)
         .foregroundColor(isSelected ? Color("AccentColor") : Color.gray)
         .background(Color.white)
         .cornerRadius(10)

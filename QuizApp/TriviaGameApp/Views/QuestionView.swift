@@ -28,9 +28,17 @@ struct QuestionView: View {
                     .font(.system(size: 20))
                     .bold()
                     .foregroundColor(Color.gray)
+                
+                AnswerRow(answer: Answer(text: "false", isCorrect: true))
+                AnswerRow(answer: Answer(text: "true", isCorrect: false))
             }
+            
+            PrimaryButton(text: "Next")
+            
+            Spacer()
         }
         .padding()
+     //   .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.yellow.opacity(0.07))
     }
