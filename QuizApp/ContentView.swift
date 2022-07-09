@@ -47,6 +47,30 @@ struct ContentView: View {
 //                    .frame(width: UIScreen.main.bounds.size.width - 20, height: 60, alignment: .center)
 //                    .multilineTextAlignment(.center)
                 
+                
+                Spacer()
+                ZStack {
+                    Circle()
+                        .stroke(lineWidth: 15)
+                        .foregroundColor(.gray)
+                        .opacity(0.3)
+                    
+                    
+                    Circle()
+                        .trim(from: 0.0, to: min(CGFloat(gameManagerVM.progress),1.0))
+                        .stroke(LinearGradient(colors: [.orange, .red],
+                                               startPoint: .topLeading,
+                                               endPoint: .bottomTrailing),
+                                style: StrokeStyle(lineWidth: 20, lineCap: .round, lineJoin: .round))
+                        .rotationEffect(Angle(degrees: 270))
+                        .animation(Animation.linear(duration: Double(gameManagerVM.maxProgress)),
+                                   value: gameManagerVM.progress)
+                    ReusebleText(text: String(gameManagerVM.progress), size: 30)
+                    
+                }
+                .frame(width: 150, height: 150)
+                
+                
                     Spacer()
                 
                 OptionGridView(gameManagerVM: gameManagerVM)

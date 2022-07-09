@@ -22,7 +22,7 @@ struct QuizCompletedView: View {
                 .padding()
             
             ReusebleText(text: gameManagerVM.model.quizWinningStatus ? "thank you for playing!!"
-                         : "Better luch next time", size: 30)
+                         : "Better luck next time", size: 30)
             .padding()
             
             Button {
