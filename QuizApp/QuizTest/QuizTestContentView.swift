@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct QuizTestContentView: View {
+    
+    // var for the score
+    @State var score = 0
+    
     var body: some View {
         NavigationView {
             VStack(spacing: 20) {
@@ -17,8 +21,15 @@ struct QuizTestContentView: View {
                 NavigationLink(destination: Quiz1()) {
                     Text("START QUIZ")
                 }
+                HStack{
+                    //MARK: Display your score
+                    Text("Last score : \(self.score) / \(myQuiz2.count)")
+                        .onAppear(){  // refresh score
+                            self.score = LoadScore(quiz: "myQuiz2")
+                        }
+                }
             }
-            .navigationTitle("QUIZ example", displayMode: .inline)
+            .navigationBarTitle("QUIZ example", displayMode: .inline)
         }
         
     }
