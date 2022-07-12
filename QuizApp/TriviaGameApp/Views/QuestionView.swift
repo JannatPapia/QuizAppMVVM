@@ -47,7 +47,7 @@ struct QuestionView: View {
             Button {
                 triviaManager.goToNextQuestion()
             } label: {
-                PrimaryButton(text: "Next", background: triviaManager.answerSelected ? Color("AccentColor") : Color.yellow.opacity(0.07))
+                PrimaryButton(text: "Next", background: triviaManager.answerSelected ? Color("AccentColor") : Color.blue.opacity(0.7))
             }
             .disabled(!triviaManager.answerSelected)
       //      PrimaryButton(text: "Next")
