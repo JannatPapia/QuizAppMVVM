@@ -19,26 +19,38 @@ struct QuestionView: View {
                 
                 Spacer()
                 
-                Text("1 out of 10")
+                Text("\(triviaManager.index + 1) out of \(triviaManager.length)")
                     .foregroundColor(Color("AccentColor"))
                     .fontWeight(.heavy)
             }
             
-            ProgressBar(progress: 40)
+            ProgressBar(progress: triviaManager.progress)
             
             VStack(alignment: .leading, spacing: 20) {
-                Text("The decimal number 31 in hexadecimal would be what?")
+                Text(triviaManager.question)
+             //   Text("The decimal number 31 in hexadecimal would be what?")
                     .font(.system(size: 20))
                     .bold()
                     .foregroundColor(Color.gray)
                 
-                AnswerRow(answer: Answer(text: "false", isCorrect: true))
-                    .environmentObject(triviaManager)
-                AnswerRow(answer: Answer(text: "true", isCorrect: false))
-                    .environmentObject(triviaManager)
+                ForEach(triviaManager.answerChoices, id: \.id) { answer in
+                    AnswerRow(answer: answer)
+                        .environmentObject(triviaManager)
+                }
+                
+//                AnswerRow(answer: Answer(text: "false", isCorrect: true))
+//                    .environmentObject(triviaManager)
+//                AnswerRow(answer: Answer(text: "true", isCorrect: false))
+//                    .environmentObject(triviaManager)
             }
             
-            PrimaryButton(text: "Next")
+            Button {
+                triviaManager.goToNextQuestion()
+            } label: {
+                PrimaryButton(text: "Next", background: triviaManager.answerSelected ? Color("AccentColor") : Color.yellow.opacity(0.07))
+            }
+            .disabled(!triviaManager.answerSelected)
+      //      PrimaryButton(text: "Next")
             
             Spacer()
         }
