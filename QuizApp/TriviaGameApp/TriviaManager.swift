@@ -73,4 +73,11 @@ class TriviaManager: ObservableObject {
         }
     }
     
+    func selectedAnswer(answer: Answer) {
+        answerSelected = true
+        if answer.isCorrect {
+            
+        }
+    }
+    
 }
