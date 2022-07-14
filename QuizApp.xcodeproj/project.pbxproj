@@ -22,6 +22,8 @@
 		375E9D982879989200A76022 /* Trivia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375E9D972879989200A76022 /* Trivia.swift */; };
 		375E9D9A2879CDEC00A76022 /* TriviaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375E9D992879CDEC00A76022 /* TriviaManager.swift */; };
 		3776094C28801C48004AEA7E /* FinalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3776094B28801C48004AEA7E /* FinalView.swift */; };
+		3776094F28807E6A004AEA7E /* FirebaseQuizAppContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3776094E28807E6A004AEA7E /* FirebaseQuizAppContentView.swift */; };
+		37760953288081A4004AEA7E /* firebaseHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37760952288081A4004AEA7E /* firebaseHome.swift */; };
 		378D973D2876BB3C00BDE4FA /* QuizAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378D973C2876BB3C00BDE4FA /* QuizAppApp.swift */; };
 		378D973F2876BB3C00BDE4FA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378D973E2876BB3C00BDE4FA /* ContentView.swift */; };
 		378D97412876BB3E00BDE4FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 378D97402876BB3E00BDE4FA /* Assets.xcassets */; };
@@ -48,6 +50,8 @@
 		375E9D972879989200A76022 /* Trivia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trivia.swift; sourceTree = "<group>"; };
 		375E9D992879CDEC00A76022 /* TriviaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaManager.swift; sourceTree = "<group>"; };
 		3776094B28801C48004AEA7E /* FinalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalView.swift; sourceTree = "<group>"; };
+		3776094E28807E6A004AEA7E /* FirebaseQuizAppContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseQuizAppContentView.swift; sourceTree = "<group>"; };
+		37760952288081A4004AEA7E /* firebaseHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firebaseHome.swift; sourceTree = "<group>"; };
 		378D97392876BB3C00BDE4FA /* QuizApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		378D973C2876BB3C00BDE4FA /* QuizAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizAppApp.swift; sourceTree = "<group>"; };
 		378D973E2876BB3C00BDE4FA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -130,6 +134,31 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		3776094D28807E10004AEA7E /* FirebaseQuizApp */ = {
+			isa = PBXGroup;
+			children = (
+				3776095128808187004AEA7E /* firebaseView */,
+				3776095028808174004AEA7E /* firebaseModel */,
+				3776094E28807E6A004AEA7E /* FirebaseQuizAppContentView.swift */,
+			);
+			path = FirebaseQuizApp;
+			sourceTree = "<group>";
+		};
+		3776095028808174004AEA7E /* firebaseModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = firebaseModel;
+			sourceTree = "<group>";
+		};
+		3776095128808187004AEA7E /* firebaseView */ = {
+			isa = PBXGroup;
+			children = (
+				37760952288081A4004AEA7E /* firebaseHome.swift */,
+			);
+			path = firebaseView;
+			sourceTree = "<group>";
+		};
 		378D97302876BB3C00BDE4FA = {
 			isa = PBXGroup;
 			children = (
@@ -149,8 +178,9 @@
 		378D973B2876BB3C00BDE4FA /* QuizApp */ = {
 			isa = PBXGroup;
 			children = (
-				375545FB287DC8B1007B6AA5 /* QuizTest */,
 				3727773728793C7E0031B47D /* TriviaGameApp */,
+				375545FB287DC8B1007B6AA5 /* QuizTest */,
+				3776094D28807E10004AEA7E /* FirebaseQuizApp */,
 				378D974C2876BBA500BDE4FA /* Models */,
 				378D974B2876BB9000BDE4FA /* UIComponents */,
 				378D973C2876BB3C00BDE4FA /* QuizAppApp.swift */,
@@ -266,8 +296,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37760953288081A4004AEA7E /* firebaseHome.swift in Sources */,
 				3776094C28801C48004AEA7E /* FinalView.swift in Sources */,
 				37554602287E06DF007B6AA5 /* SimpleQuizModel.swift in Sources */,
+				3776094F28807E6A004AEA7E /* FirebaseQuizAppContentView.swift in Sources */,
 				378D973F2876BB3C00BDE4FA /* ContentView.swift in Sources */,
 				375E9D9A2879CDEC00A76022 /* TriviaManager.swift in Sources */,
 				378D97542877213700BDE4FA /* OptionGridView.swift in Sources */,
