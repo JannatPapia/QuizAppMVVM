@@ -20,12 +20,12 @@ var myQuiz2: [SimpleQuizModel] = [
   SimpleQuizModel(img: "image",
                   text: "What is your name?",
                   answer: ["Olivia", "Nabil", "Nazmul", "Mira"],
-                  correct: 3),
+                  correct: 2),
   
   SimpleQuizModel(img: "image",
                   text: "Where are you live ?",
                   answer: ["Uttara", "Banani", "Mirpur", "Mughda"],
-                  correct: 1),
+                  correct: 0),
   
   SimpleQuizModel(img: "image",
                   text: "How Old are you?",
@@ -35,12 +35,12 @@ var myQuiz2: [SimpleQuizModel] = [
   SimpleQuizModel(img: "image",
                   text: "What is your Favorite Color?",
                   answer: ["Green", "Yellow", "Blue", "Black"],
-                  correct: 4),
+                  correct: 3),
   
   SimpleQuizModel(img: "image",
                   text: "What is your favorite food?",
                   answer: ["Chicken", "Beef", "Mutton", "Duck"],
-                  correct: 2),
+                  correct: 1),
 ]
 
 func saveScore(quiz: String, score: Int) {

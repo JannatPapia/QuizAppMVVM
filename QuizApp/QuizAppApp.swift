@@ -11,8 +11,9 @@ import SwiftUI
 struct QuizAppApp: App {
     var body: some Scene {
         WindowGroup {
-            TriviaView()
-                .environmentObject(TriviaManager())
+            QuizTestContentView()
+//            TriviaView()
+//                .environmentObject(TriviaManager())
           //  QuestionView()
           //  TriviaContentView()
             //   PrimaryButton(text: "Next")
