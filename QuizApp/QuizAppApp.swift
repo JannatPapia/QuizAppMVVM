@@ -11,7 +11,9 @@ import SwiftUI
 struct QuizAppApp: App {
     var body: some Scene {
         WindowGroup {
-            QuizTestContentView()
+            FirebaseQuizAppContentView()
+            //MARK: simple quiz app
+       //     QuizTestContentView()
 //            TriviaView()
 //                .environmentObject(TriviaManager())
           //  QuestionView()
