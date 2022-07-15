@@ -27,7 +27,7 @@ struct firebaseHome: View {
                 .fontWeight(.heavy)
                 .foregroundColor(Color.black)
                 .padding(.top, 8)
-            multilineTextAlignment(.center)
+                .multilineTextAlignment(.center)
             
             Spacer(minLength: 0)
             
@@ -59,7 +59,7 @@ struct firebaseHome: View {
                       .background(Color.white)
                       .cornerRadius(15)
                       // opening QA view as sheet...
-                      onTapGesture {
+                      .onTapGesture {
                           set = "Round_\(index)"
                           show.toggle()
                       }
@@ -72,6 +72,9 @@ struct firebaseHome: View {
             Spacer(minLength: 0)
         }
         .background(Color.black.opacity(0.05).ignoresSafeArea())
+        .sheet(isPresented: $show, content: {
+            QA()
+        })
     }
 }
 

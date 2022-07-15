@@ -14,6 +14,7 @@ struct QA: View {
         // Top Progress View...
         ZStack(alignment: Alignment(horizontal: .leading, vertical: .center),
                content: {
+            
               Capsule()
                 .fill(Color.gray.opacity(0.7))
                 .frame(height: 6)
