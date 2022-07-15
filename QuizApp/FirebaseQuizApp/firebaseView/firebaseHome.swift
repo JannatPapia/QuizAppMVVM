@@ -13,6 +13,11 @@ struct firebaseHome: View {
     // Storing level for fetching questions....
     @State var set = "Round_1"
     
+    //For analytic
+    @State var correct = 0
+    @State var wrong = 0
+    @State var answered = 0
+    
     var body: some View {
         VStack{
             
@@ -73,7 +78,7 @@ struct firebaseHome: View {
         }
         .background(Color.black.opacity(0.05).ignoresSafeArea())
         .sheet(isPresented: $show, content: {
-            QA()
+            QA(correct: $correct, wrong: $wrong)
         })
     }
 }

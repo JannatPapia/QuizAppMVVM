@@ -9,6 +9,8 @@ import SwiftUI
 
 // question Answer View...
 struct QA: View {
+    @Binding var correct: Int
+    @Binding var wrong: Int
     var body: some View {
        
         // Top Progress View...
@@ -28,7 +30,7 @@ struct QA: View {
         // Correct and Wrong count....
         HStack{
             Label(
-                title: { Text("1")
+                title: { Text(correct == 0 ? "" : "\(correct)")
                         .font(.largeTitle)
                         .foregroundColor(Color.black)
                 },
@@ -40,7 +42,7 @@ struct QA: View {
             Spacer()
             
             Label(
-                title: { Text("1")
+                title: { Text(wrong == 0 ? "" : "\(wrong)")
                         .font(.largeTitle)
                         .foregroundColor(Color.black)
                 },
