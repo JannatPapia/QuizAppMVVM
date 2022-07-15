@@ -12,6 +12,8 @@ struct MainTabView: View {
         TabView {
             SwiftUIContentView(question: SwiftQuestion.allQuestions[0])
                 .tabItem { Label("Game", systemImage: "gamecontroller")}
+            ControlsView()
+                .tabItem { Label("Controls", systemImage: "gear")}
         }
     }
 }

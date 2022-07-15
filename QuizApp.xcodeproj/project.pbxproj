@@ -37,6 +37,7 @@
 		37B1896E28818B70000A3411 /* SwiftQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B1896D28818B70000A3411 /* SwiftQuestion.swift */; };
 		37B189702881B23B000A3411 /* BottomText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B1896F2881B23B000A3411 /* BottomText.swift */; };
 		37B189722881BABC000A3411 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B189712881BABC000A3411 /* MainTabView.swift */; };
+		37B189742881BCC4000A3411 /* ControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B189732881BCC4000A3411 /* ControlsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,7 @@
 		37B1896D28818B70000A3411 /* SwiftQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftQuestion.swift; sourceTree = "<group>"; };
 		37B1896F2881B23B000A3411 /* BottomText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomText.swift; sourceTree = "<group>"; };
 		37B189712881BABC000A3411 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		37B189732881BCC4000A3411 /* ControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 				37B1896D28818B70000A3411 /* SwiftQuestion.swift */,
 				37B1896F2881B23B000A3411 /* BottomText.swift */,
 				37B189712881BABC000A3411 /* MainTabView.swift */,
+				37B189732881BCC4000A3411 /* ControlsView.swift */,
 			);
 			path = BuildSwiftUI;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				37554602287E06DF007B6AA5 /* SimpleQuizModel.swift in Sources */,
 				3776094F28807E6A004AEA7E /* FirebaseQuizAppContentView.swift in Sources */,
 				378D973F2876BB3C00BDE4FA /* ContentView.swift in Sources */,
+				37B189742881BCC4000A3411 /* ControlsView.swift in Sources */,
 				3776095528811396004AEA7E /* QA.swift in Sources */,
 				375E9D9A2879CDEC00A76022 /* TriviaManager.swift in Sources */,
 				378D97542877213700BDE4FA /* OptionGridView.swift in Sources */,
