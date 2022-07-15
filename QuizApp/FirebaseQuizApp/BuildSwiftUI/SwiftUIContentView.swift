@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct SwiftUIContentView: View {
-    let question = "What was the first computer bug?"
-    let possibleAnswers = [
-          "Fly",
-          "Moth",
-          "Ant",
-          "Beetle",
-    ]
+    let question : SwiftQuestion
+    
+    var guessedIndex : Int? = nil
+    //"What was the first computer bug?"
+//    let possibleAnswers = [
+//          "Fly",
+//          "Moth",
+//          "Ant",
+//          "Beetle",
+//    ]
     var body: some View {
         ZStack {
             Color(.sRGB, red: 0.5, green: 0.3, blue: 0.5, opacity: 0.2)
@@ -27,15 +30,16 @@ struct SwiftUIContentView: View {
              Text("Question 1 / 4")
                     .padding()
             Spacer()
-            Text(question)
+            Text(question.questionText)
             // Text("What is 1 + 1?")
                    .font(.title)
+                   .multilineTextAlignment(.center)
                    .padding()
             Spacer()
             Spacer()
             HStack {
-                ForEach(possibleAnswers.indices) { index in
-                    AnswerButton(text: possibleAnswers[index])
+                ForEach(question.possibleAnswers.indices) { index in
+                    AnswerButton(text: question.possibleAnswers[index])
                 }
 //                AnswerButton(text: "1")
 //                AnswerButton(text: "2")
@@ -76,6 +80,16 @@ struct SwiftUIContentView: View {
         }
         }
     }
+    
+    func colorForButton(at buttonIndex: Int) -> Color {
+        guard let guessedIndex = guessedIndex,  guessedIndex == buttonIndex else { return .clear }
+        if guessedIndex == question.correctAnswerIndex {
+            return .green
+        } else {
+            return .red
+        }
+    }
+    
 }
 
 struct AnswerButton: View {
@@ -89,12 +103,21 @@ struct AnswerButton: View {
         .padding()
         .border(Color.blue, width: 4)
     }
+    
+//    func colorForButton(at buttonIndex: Int) -> Color {
+//        guard let guessedIndex = guessedIndex,  guessedIndex == buttonIndex else { return .clear }
+//        if guessedIndex == question.correctAnswerIndex {
+//            return .green
+//        } else {
+//            return .red
+//        }
+//    }
 }
 
 
 struct SwiftUIContentView_Previews: PreviewProvider {
     static var previews: some View {
-        SwiftUIContentView()
-            .preferredColorScheme(.dark)
+        SwiftUIContentView(question: SwiftQuestion.allQuestions[4])
+            //    .preferredColorScheme(.dark)
     }
 }
