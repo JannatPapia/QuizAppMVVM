@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct firebaseHome: View {
+    
+    @State var show = false
+    // Storing level for fetching questions....
+    @State var set = "Round_1"
+    
     var body: some View {
         VStack{
             
@@ -22,6 +27,7 @@ struct firebaseHome: View {
                 .fontWeight(.heavy)
                 .foregroundColor(Color.black)
                 .padding(.top, 8)
+            multilineTextAlignment(.center)
             
             Spacer(minLength: 0)
             
@@ -52,10 +58,16 @@ struct firebaseHome: View {
                       .frame(maxWidth: .infinity)
                       .background(Color.white)
                       .cornerRadius(15)
+                      // opening QA view as sheet...
+                      onTapGesture {
+                          set = "Round_\(index)"
+                          show.toggle()
+                      }
                   }
 //                Text("Placeholder")
 //                Text("Placeholder")
             }/*@END_MENU_TOKEN*/)
+              .padding()
             
             Spacer(minLength: 0)
         }
