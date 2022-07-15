@@ -9,7 +9,16 @@ import SwiftUI
 
 struct SwiftUIContentView: View {
     let question = "What was the first computer bug?"
+    let possibleAnswers = [
+          "Fly",
+          "Moth",
+          "Ant",
+          "Beetle",
+    ]
     var body: some View {
+        ZStack {
+            Color(.sRGB, red: 0.5, green: 0.3, blue: 0.5, opacity: 0.2)
+                .ignoresSafeArea()
         VStack {
                     Text("Quiz Time")
                     .font(.largeTitle)
@@ -25,8 +34,8 @@ struct SwiftUIContentView: View {
             Spacer()
             Spacer()
             HStack {
-                ForEach(1..<5) { index in
-                    AnswerButton(text: "\(index)")
+                ForEach(possibleAnswers.indices) { index in
+                    AnswerButton(text: possibleAnswers[index])
                 }
 //                AnswerButton(text: "1")
 //                AnswerButton(text: "2")
@@ -65,6 +74,7 @@ struct SwiftUIContentView: View {
      //       .padding()
             }
         }
+        }
     }
 }
 
@@ -85,5 +95,6 @@ struct AnswerButton: View {
 struct SwiftUIContentView_Previews: PreviewProvider {
     static var previews: some View {
         SwiftUIContentView()
+            .preferredColorScheme(.dark)
     }
 }
