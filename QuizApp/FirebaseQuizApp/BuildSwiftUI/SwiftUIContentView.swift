@@ -23,10 +23,13 @@ struct SwiftUIContentView: View {
             Spacer()
             Spacer()
             HStack {
-                AnswerButton(text: "1")
-                AnswerButton(text: "2")
-                AnswerButton(text: "3")
-                AnswerButton(text: "4")
+                ForEach(1..<5) { index in
+                    AnswerButton(text: "\(index)")
+                }
+//                AnswerButton(text: "1")
+//                AnswerButton(text: "2")
+//                AnswerButton(text: "3")
+//                AnswerButton(text: "4")
 //            Button(action: {
 //                print("You selected 1")
 //            }) {
