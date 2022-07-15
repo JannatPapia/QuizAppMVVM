@@ -16,13 +16,40 @@ struct QA: View {
                content: {
             
               Capsule()
-                .fill(Color.gray.opacity(0.7))
+                .fill(Color.gray.opacity(0.5))
                 .frame(height: 6)
             
             Capsule()
                 .fill(Color.green)
                 .frame(width: 100, height: 6)
         })
+        .padding()
+        
+        // Correct and Wrong count....
+        HStack{
+            Label(
+                title: { Text("1")
+                        .font(.largeTitle)
+                        .foregroundColor(Color.black)
+                },
+                icon: {Image(systemName: "checkmark.circle")
+                        .font(.largeTitle)
+                        .foregroundColor(Color.green)
+                })
+            
+            Spacer()
+            
+            Label(
+                title: { Text("1")
+                        .font(.largeTitle)
+                        .foregroundColor(Color.black)
+                },
+                icon: {Image(systemName: "xmark.circle")
+                        .font(.largeTitle)
+                        .foregroundColor(Color.red)
+                })
+
+        }
         .padding()
         
         Spacer(minLength: 0)
