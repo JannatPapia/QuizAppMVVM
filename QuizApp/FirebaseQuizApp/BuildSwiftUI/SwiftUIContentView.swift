@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SwiftUIContentView: View {
+    let question = "What was the first computer bug?"
     var body: some View {
         VStack {
                     Text("Quiz Time")
@@ -17,7 +18,8 @@ struct SwiftUIContentView: View {
              Text("Question 1 / 4")
                     .padding()
             Spacer()
-             Text("What is 1 + 1?")
+            Text(question)
+            // Text("What is 1 + 1?")
                    .font(.title)
                    .padding()
             Spacer()
