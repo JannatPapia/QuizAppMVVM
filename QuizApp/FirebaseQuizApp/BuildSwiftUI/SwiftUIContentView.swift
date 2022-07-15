@@ -10,7 +10,7 @@ import SwiftUI
 struct SwiftUIContentView: View {
     let question : SwiftQuestion
     
-    var guessedIndex : Int? = nil
+    @State var guessedIndex : Int? = nil
     //"What was the first computer bug?"
 //    let possibleAnswers = [
 //          "Fly",
@@ -39,7 +39,12 @@ struct SwiftUIContentView: View {
             Spacer()
             HStack {
                 ForEach(question.possibleAnswers.indices) { index in
-                    AnswerButton(text: question.possibleAnswers[index])
+                    AnswerButton(text: question.possibleAnswers[index]) {
+                        guessedIndex = index
+                     //   print("New print location! ")
+                    }
+                        .background(colorForButton(at: index))
+                        .disabled(guessedIndex != nil)
                 }
 //                AnswerButton(text: "1")
 //                AnswerButton(text: "2")
@@ -77,6 +82,9 @@ struct SwiftUIContentView: View {
 //            .border(Color.blue, width: 4)
      //       .padding()
             }
+            if guessedIndex != {
+            BottomText(str: "Next Question")
+            }
         }
         }
     }
@@ -85,7 +93,8 @@ struct SwiftUIContentView: View {
         guard let guessedIndex = guessedIndex,  guessedIndex == buttonIndex else { return .clear }
         if guessedIndex == question.correctAnswerIndex {
             return .green
-        } else {
+        }
+            else {
             return .red
         }
     }
@@ -94,9 +103,11 @@ struct SwiftUIContentView: View {
 
 struct AnswerButton: View {
     let text: String
+    let onClick : () -> Void
     var body: some View {
         Button(action: {
-            print("You selected \(text)")
+            onClick()
+          //  print("You selected \(text)")
         }) {
             Text(text)
         }
