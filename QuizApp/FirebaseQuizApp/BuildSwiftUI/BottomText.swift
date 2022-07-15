@@ -19,7 +19,9 @@ struct BottomText: View {
                 .padding(.all)
             Spacer()
         }
+  //      .padding()
         .background(Color.blue.opacity(0.4))
+        .padding()
     }
 }
 

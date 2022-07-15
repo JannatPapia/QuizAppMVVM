@@ -82,10 +82,11 @@ struct SwiftUIContentView: View {
 //            .border(Color.blue, width: 4)
      //       .padding()
             }
-            if guessedIndex != {
+            if guessedIndex != nil {
             BottomText(str: "Next Question")
             }
         }
+        .padding(.bottom)
         }
     }
     

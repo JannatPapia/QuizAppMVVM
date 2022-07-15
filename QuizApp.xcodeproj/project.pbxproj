@@ -36,6 +36,7 @@
 		378D97542877213700BDE4FA /* OptionGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378D97532877213700BDE4FA /* OptionGridView.swift */; };
 		37B1896E28818B70000A3411 /* SwiftQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B1896D28818B70000A3411 /* SwiftQuestion.swift */; };
 		37B189702881B23B000A3411 /* BottomText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B1896F2881B23B000A3411 /* BottomText.swift */; };
+		37B189722881BABC000A3411 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B189712881BABC000A3411 /* MainTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,7 @@
 		378D97532877213700BDE4FA /* OptionGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionGridView.swift; sourceTree = "<group>"; };
 		37B1896D28818B70000A3411 /* SwiftQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftQuestion.swift; sourceTree = "<group>"; };
 		37B1896F2881B23B000A3411 /* BottomText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomText.swift; sourceTree = "<group>"; };
+		37B189712881BABC000A3411 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +177,7 @@
 				3776095728814788004AEA7E /* SwiftUIContentView.swift */,
 				37B1896D28818B70000A3411 /* SwiftQuestion.swift */,
 				37B1896F2881B23B000A3411 /* BottomText.swift */,
+				37B189712881BABC000A3411 /* MainTabView.swift */,
 			);
 			path = BuildSwiftUI;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				37554600287DCD68007B6AA5 /* Quiz1.swift in Sources */,
 				378D974E2876BBCF00BDE4FA /* QuizModel.swift in Sources */,
 				378D97522877175100BDE4FA /* GameManagerVM.swift in Sources */,
+				37B189722881BABC000A3411 /* MainTabView.swift in Sources */,
 				37B1896E28818B70000A3411 /* SwiftQuestion.swift in Sources */,
 				375E9D9428797E8600A76022 /* AnswerRow.swift in Sources */,
 				378D973D2876BB3C00BDE4FA /* QuizAppApp.swift in Sources */,
