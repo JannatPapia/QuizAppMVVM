@@ -23,41 +23,59 @@ struct SwiftUIContentView: View {
             Spacer()
             Spacer()
             HStack {
-            Button(action: {
-                print("You selected 1")
-            }) {
-                Text("Touch 1")
-            }
-            .padding()
-            .border(Color.blue, width: 4)
-            Button(action: {
-                print("You selected 2")
-            }) {
-                Text("Touch 2")
-            }
-            .padding()
-            .border(Color.blue, width: 4)
-            
-            Button(action: {
-                print("You selected 3")
-            }) {
-                Text("Touch 3")
-            }
-            .padding()
-            .border(Color.blue, width: 4)
-            
-            Button(action: {
-                print("You selected 4")
-            }) {
-                Text("Touch 4")
-            }
-            .padding()
-            .border(Color.blue, width: 4)
+                AnswerButton(text: "1")
+                AnswerButton(text: "2")
+                AnswerButton(text: "3")
+                AnswerButton(text: "4")
+//            Button(action: {
+//                print("You selected 1")
+//            }) {
+//                Text("Touch 1")
+//            }
+//            .padding()
+//            .border(Color.blue, width: 4)
+//            Button(action: {
+//                print("You selected 2")
+//            }) {
+//                Text("Touch 2")
+//            }
+//            .padding()
+//            .border(Color.blue, width: 4)
+//
+//            Button(action: {
+//                print("You selected 3")
+//            }) {
+//                Text("Touch 3")
+//            }
+//            .padding()
+//            .border(Color.blue, width: 4)
+//
+//            Button(action: {
+//                print("You selected 4")
+//            }) {
+//                Text("Touch 4")
+//            }
+//            .padding()
+//            .border(Color.blue, width: 4)
      //       .padding()
             }
         }
     }
 }
+
+struct AnswerButton: View {
+    let text: String
+    var body: some View {
+        Button(action: {
+            print("You selected \(text)")
+        }) {
+            Text(text)
+        }
+        .padding()
+        .border(Color.blue, width: 4)
+    }
+}
+
 
 struct SwiftUIContentView_Previews: PreviewProvider {
     static var previews: some View {
