@@ -38,7 +38,8 @@ class fireQuestionViewModel:  ObservableObject {
 //        }
 //
              do {
-                 if let file = Bundle.main.path(forResource:"data", ofType: "json") {
+                 if let file = Bundle.main.path(forResource: "data", ofType: "json") {
+             //    if let file = Bundle.main.url(forResource: set, withExtension: "json") {
                            let data = try Data(contentsOf: URL(fileURLWithPath: file), options: .mappedIfSafe)
              //        let _posts = try? JSONDecoder().decode([QuestionModelElement].self, from: data)
                      //try Data(contentsOf: file)

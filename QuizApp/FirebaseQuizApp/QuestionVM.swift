@@ -210,3 +210,110 @@
 //    var id : Int
 //    var image : String
 //}
+
+
+
+
+import Foundation
+
+//
+//  HelperDelegate.swift
+//  WordForLearn
+//
+//  Created by MacBook Air M1 on 23/7/21.
+//
+
+import SwiftUI
+//import AVFoundation
+//import MobileCoreServices
+
+
+class DelegetStorage : ObservableObject {
+    
+   
+    
+    
+ //   var resut = 0
+    
+    
+//    @Published var wish : Bool = false
+    
+ //   var sound: AVAudioPlayer!
+    
+    
+    @Published var questions : [Qustion] = []
+
+    func getQuestions(set : [nazmul], gameLavel : String){
+    
+        for item in set {
+            //swape= ...
+            var postions = [item.optionA ?? "",item.optionB ?? "",item.optionC ?? "",item.optionD ?? ""]
+    
+            print("postion \(postions)")
+            
+            postions.shuffle()
+            
+            questions.append(Qustion(question: item.question ?? "", optionA: postions[0], optionB: postions[1], optionC: postions[2], optionD: postions[3], answer: item.answer ?? ""))
+            
+//            questions.append(Qustion(question: item.qustion ?? "" , optoinA: postions[0], optoinB:  postions[1], optoinC:  postions[2], optoinD:  item.options4 ?? "", answer:  item.answer ?? ""))
+        }
+        
+        
+        questions.reverse()
+    }
+}
+
+
+
+
+
+
+
+
+
+//class ViewModelDateProcess: ObservableObject {
+//
+//
+//
+//    @Published var selectedIndexOfItem = String()
+//
+////    @Published var set = BIoMenViewModel()
+//
+////    @Published var itemOpinions = [OpinionModel]()
+//    @Published var itemQuizs = [nazmul]()
+//
+//
+////    func addAnxietyDepration(){
+////
+////        if  !AppAPI.margelearingView {
+////             ApiTrival().loadData(fileName: "citizenshiptestUSLearn") { [self] (items) in  //TStorage.wordFocus
+////                itemOpinions = items
+////             }
+////        }
+////    }
+//
+//    func addItem(){
+//        fireQuestionViewModel().loadData(set: "data") { [self.index] (items) in  //TStorage.wordFocus
+//            itemQuizs = items.sorted(by: { $0.sl! < $1.sl! })
+//            self = []
+//         //   self.itemQuizs
+//        //    if  AppAPI.margelearingView{
+//
+//  //              var quizToOpinion = [OpinionModel]()
+//
+////                for item in itemQuizs{
+////
+////                    quizToOpinion.append(OpinionModel(kidsDid: item.qustion, opinion1Posivite100Parcent: item.answer, opinion2Posivite50Parcent: nil, opinion3Nagative50Parcent: nil, opinion4Nagative100Parcent: nil, opinion5Nagative150Parcent: nil, opinion5Nagative200Parcent: nil, sl: item.sl, image: item.image))
+////                }
+//
+//   //             self.itemOpinions = quizToOpinion
+//
+//            }
+//
+//        }
+//
+//    //}
+//}
+//
+//
+////Unable to infer type of a closure parameter 'items' in the current context

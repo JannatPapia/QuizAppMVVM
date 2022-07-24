@@ -13,7 +13,7 @@ import SwiftUI
 
 struct fireQuestionView: View {
     
-    @Binding var question: QuestionModelElement
+    @Binding var question: Qustion
     @Binding var correct: Int
     @Binding var wrong: Int
     @Binding var answered: Int
@@ -25,7 +25,7 @@ struct fireQuestionView: View {
     
     var body: some View {
         VStack(spacing: 22){
-            Text(question.question!)
+            Text(question.question)
                 .font(.title2)
                 .fontWeight(.heavy)
                 .foregroundColor(Color.black)
