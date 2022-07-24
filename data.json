@@ -1,0 +1,162 @@
+
+[
+  {
+    "sl": 1,
+    "category": "Alabama dmv",
+    "question": "When you see the following sign, you should:",
+    "optionA": "Continue at your regular speed because the crossing is controlled.",
+    "optionB": "Look, listen, and prepare to stop at the crossing if necessary.",
+    "optionC": "Stop at the railroad crossing and wait for a signal before crossing",
+    "optionD": "Move over to the right edge of your lane, reduce your speed, and cross the tracks.",
+    "answer": "Look, listen, and prepare to stop at the crossing if necessary.",
+    "image": "rail49"
+  },
+  {
+    "sl": 2,
+    "category": "Alabama dmv",
+    "question": "If your cell phone rings while you are driving and you do not have a hands-free device, you should:",
+    "optionA": "Answer the call because it may be an emergency.",
+    "optionB": "Send a brief text message.",
+    "optionC": "Let the call go to voicemail.",
+    "optionD": "Check the number of the incoming call before deciding whether or not to answer it.",
+    "answer": "Let the call go to voicemail.",
+    "image": ""
+  },
+  {
+    "sl": 3,
+    "category": "Alabama dmv",
+    "question": "Which of the following statements is true about drugs and driving?",
+    "optionA": "Any prescription drug is safe if it doesn't make you drowsy.",
+    "optionB": "Only illegal drugs can impair your driving.",
+    "optionC": "Even over-the-counter medications can impair your driving.",
+    "optionD": "Medications do not affect you if you took them more than two hours ago.",
+    "answer": "Even over-the-counter medications can impair your driving.",
+    "image": "sign3"
+  },
+  {
+    "sl": 4,
+    "category": "Alabama dmv",
+    "question": "It is illegal for a person 21 years of age or older to drive with a blood alcohol concentration that is __ or higher.",
+    "optionA": "0.03%",
+    "optionB": "0.05%",
+    "optionC": "0.08%",
+    "optionD": "0.01%",
+    "answer": "0.08%",
+    "image": ""
+  },
+  {
+    "sl": 5,
+    "category": "Alabama dmv",
+    "question": "What does this sign indicate?",
+    "optionA": "Pedestrian crossing",
+    "optionB": "School crossing",
+    "optionC": "Children crossing",
+    "optionD": "Disabled person crossing",
+    "answer": "Pedestrian crossing",
+    "image": "pedestrian5"
+  },
+  {
+    "sl": 6,
+    "category": "Alabama dmv",
+    "question": "What should you do if you see this sign?",
+    "optionA": "Stop and turn to the left",
+    "optionB": "Slow down and prepare to turn",
+    "optionC": "Slow down and pull to the side of the road",
+    "optionD": "Check your turn signals",
+    "answer": "Slow down and prepare to turn",
+    "image": "slow6"
+  },
+  {
+    "sl": 7,
+    "category": "Alabama dmv",
+    "question": "Driving along the rear side of another vehicle is:",
+    "optionA": "A good defensive technique for avoiding the other driver's blind spot.",
+    "optionB": "A good way to draft off the other vehicle.",
+    "optionC": "An effective way to maintain a space cushion on your left side.",
+    "optionD": "Dangerous because you are probably in one of the other vehicle's blind spots.",
+    "answer": "Dangerous because you are probably in one of the other vehicle's blind spots.",
+    "image": ""
+  },
+  {
+    "sl": 8,
+    "category": "Alabama dmv",
+    "question": "The posted speed limit on a road is 55 mph. When this road is wet:",
+    "optionA": "Drive 5 to 10 mph under the speed limit.",
+    "optionB": "Maintain a speed of 55 mph.",
+    "optionC": "Drive 20 to 25 mph under the speed limit.",
+    "optionD": "Test your brakes frequently.",
+    "answer": "Drive 5 to 10 mph under the speed limit.",
+    "image": ""
+  },
+  {
+    "sl": 9,
+    "category": "Alabama dmv",
+    "question": "You are traveling on a freeway posted for 65 mph, but traffic is heavy and moving at just 35 mph. The best speed for your vehicle is:",
+    "optionA": "35 mph",
+    "optionB": "30 mph.",
+    "optionC": "25 mph.",
+    "optionD": "20 mph.",
+    "answer": "25 mph.",
+    "image": ""
+  },
+  {
+    "sl": 10,
+    "category": "Alabama dmv",
+    "question": "What does this sign mean?",
+    "optionA": "Pay attention to traffic coming from the left",
+    "optionB": "Slow down and look both ways",
+    "optionC": "Turn around if possible",
+    "optionD": "Traffic travels one way only",
+    "answer": "Traffic travels one way only",
+    "image": "oneway10"
+  },
+  {
+    "sl": 11,
+    "category": "Alabama dmv",
+    "question": "A blue traffic sign marks:",
+    "optionA": "A warning",
+    "optionB": "Construction",
+    "optionC": "Motorist services",
+    "optionD": "Direction",
+    "answer": "Motorist services",
+    "image": ""
+  },
+  {
+    "sl": 12,
+    "category": "Alabama dmv",
+    "question": "This warning sign indicates",
+    "optionA": "merge to your left",
+    "optionB": "traffic in both directions ahead",
+    "optionC": "median ahead",
+    "optionD": "a divided highway ends",
+    "answer": "a divided highway ends",
+    "image": "sign15"
+  },
+  {
+    "sl": 13,
+    "category": "Alabama dmv",
+    "question": "What does this sign mean?",
+    "optionA": "Drawbridge ahead",
+    "optionB": "No trucks allowed",
+    "optionC": "Steep hill ahead",
+    "optionD": "Truck ramp ahead",
+    "answer": "Steep hill ahead",
+    "image": ""
+  },
+  {
+    "sl": 14,
+    "category": "Alabama dmv",
+    "question": "When you see a curb that is painted blue, you know:",
+    "optionA": "The space is reserved for parking for persons with disabilities whose vehicles have special plates or placards.",
+    "optionB": "You have entered a parking lot at a rest area.",
+    "optionC": "That this area is a bus stop.",
+    "optionD": "You may park here for 15 minutes or less.",
+    "answer": "The space is reserved for parking for persons with disabilities whose vehicles have special plates or placards.",
+    "image": ""
+  }
+  ]
+
+
+
+
+

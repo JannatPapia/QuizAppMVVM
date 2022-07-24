@@ -29,7 +29,7 @@ struct ContentView: View {
                     .padding()
                 
   //              ReusebleText(text: "My Question", size: 25)
-                ReusebleText(text: gameManagerVM.model.quizModel.question, size: 25)
+                ReusebleText(text: gameManagerVM.model.quizModel.question1, size: 25)
                     .lineLimit(3)
                     .frame(width: UIScreen.main.bounds.size.width - 20, height: 60, alignment: .center)
                     .multilineTextAlignment(.center)

@@ -14,8 +14,20 @@ struct QuizTestContentView: View {
     
     var body: some View {
         NavigationView {
+            ZStack {
+                
+                Image("image")
+                    .resizable()
+                    .aspectRatio(contentMode: ContentMode.fill)
+                    .ignoresSafeArea()
+                
             VStack(spacing: 20) {
                 Text("Welcome to the quiz game")
+                    .font(.system(size: 30, weight: .bold, design: .rounded))
+                    .foregroundColor(.white)
+                    .shadow(color: Color.black, radius: 2, x: 0, y: 3)
+                //    .font(.largeTitle)
+                 //   .foregroundColor(Color.white)
                 
                 // Button to start the quiz
                 NavigationLink(destination: Quiz1()) {
@@ -26,12 +38,24 @@ struct QuizTestContentView: View {
                     Text("Last score : \(self.score) / \(myQuiz2.count)")
                         .onAppear(){  // refresh score
                             self.score = LoadScore(quiz: "myQuiz2")
+                            //    .foregroundColor(Color.white)
                         }
                 }
             }
             .navigationBarTitle("QUIZ example", displayMode: .inline)
+            .font(.system(size: 30, weight: .bold, design: .rounded))
+            .foregroundColor(.white)
+            .shadow(color: Color.black, radius: 2, x: 0, y: 3)
+     
+            
+                
+        //    .foregroundColor(Color.white)
+          // .background(Color.green.opacity(0.5))
+         //   Color.red
         }
-        
+        }
+   //     Color.green
+        //.background(Color.green.opacity(0.5))
     }
 }
 

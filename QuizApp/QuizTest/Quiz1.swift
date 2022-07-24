@@ -21,14 +21,57 @@ struct Quiz1: View {
         
         VStack(alignment: .leading, spacing: 15) {
             
+            
+            
+            
+            
+            
+                Circle()
+             //       .trim(from: 0.0, to: min(CGFloat(gameManagerVM.progress),1.0))
+                    .stroke(LinearGradient(colors: [.orange, .red],
+                                           startPoint: .topLeading,
+                                           endPoint: .bottomTrailing),
+                            style: StrokeStyle(lineWidth: 20, lineCap: .round, lineJoin: .round))
+                    .rotationEffect(Angle(degrees: 270))
+              //      .animation(Animation.linear(duration: Double(gameManagerVM.maxProgress)),
+                        //       value: gameManagerVM.progress)
+          //      ReusebleText(text: String(gameManagerVM.progress), size: 30)
+            
+            
+            
+            
+      //      image of the question
+//                Image(myQuiz2[self.i].img! )
+//                    .resizable()
+//                    .scaledToFit()
+//                    .padding(.horizontal)
+            
             //if i < of question -> play Question
             if(self.i < myQuiz2.count){
                 
+                
+                
+                
+                
+//                Circle()
+//                    .trim(from: 0.0, to: min(CGFloat(gameManagerVM.progress),1.0))
+//                    .stroke(LinearGradient(colors: [.orange, .red],
+//                                           startPoint: .topLeading,
+//                                           endPoint: .bottomTrailing),
+//                            style: StrokeStyle(lineWidth: 20, lineCap: .round, lineJoin: .round))
+//                    .rotationEffect(Angle(degrees: 270))
+//                    .animation(Animation.linear(duration: Double(gameManagerVM.maxProgress)),
+//                               value: gameManagerVM.progress)
+//                ReusebleText(text: String(gameManagerVM.progress), size: 30)
+                
+                
+                
+                
                 //image of the question
-                Image(myQuiz2[self.i].img! )
-                    .resizable()
-                    .scaledToFit()
-                    .padding(.horizontal)
+//                Image(myQuiz2[self.i].img! )
+//                    .resizable()
+//                    .scaledToFit()
+//                    .padding(.horizontal)
                 
                 //text of the question
                 Text(myQuiz2[self.i].text!)

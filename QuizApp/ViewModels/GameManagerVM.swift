@@ -113,7 +113,7 @@ class GameManagerVM : ObservableObject {
 extension GameManagerVM {
     static var quizData: [QuizModel] {
         [
-            QuizModel(question: "which is the fastest animal in the world?",
+            QuizModel(question1: "which is the fastest animal in the world?",
                       answer: "B",
                       optionList: [QuizOption(id: 11, optionId: "A", option: "Turtle", color: Color.yellow),
                                    QuizOption(id: 12, optionId: "B", option: "Cheetah", color: Color.red),
@@ -122,7 +122,7 @@ extension GameManagerVM {
                                   ]),
             
             
-            QuizModel(question: "Which of these animals swims in upright position?",
+            QuizModel(question1: "Which of these animals swims in upright position?",
                       answer: "C",
                       optionList: [QuizOption(id: 11, optionId: "A", option: "Sea Lion", color: Color.yellow),
                                    QuizOption(id: 12, optionId: "B", option: "Sea Urchin", color: Color.red),
@@ -130,7 +130,7 @@ extension GameManagerVM {
                                    QuizOption(id: 14, optionId: "D", option: "Sea slug", color: Color.purple)
                                   ]),
             
-            QuizModel(question: "Which is the world largest living fish?",
+            QuizModel(question1: "Which is the world largest living fish?",
                       answer: "B",
                       optionList: [QuizOption(id: 31, optionId: "A", option: "Manta Ray", color: Color.yellow),
                                    QuizOption(id: 32, optionId: "B", option: "Whale Shark", color: Color.red),

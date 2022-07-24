@@ -6,24 +6,27 @@
 //
 
 import SwiftUI
+//import FirebaseCore
 
 @main
 struct QuizAppApp: App {
+//    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     var body: some Scene {
         WindowGroup {
-            MainTabView()
+         //   MainTabView()
          //   SwiftUIContentView(question: SwiftQuestion.allQuestions[0])
             //For speedcode firebase
-         //   FirebaseQuizAppContentView()
+            FirebaseQuizAppContentView()
             //MARK: simple quiz app
        //     QuizTestContentView()
-//            TriviaView()
+       //     TriviaView()
 //                .environmentObject(TriviaManager())
           //  QuestionView()
-          //  TriviaContentView()
+        //    TriviaContentView()
             //   PrimaryButton(text: "Next")
             //MARK: Preview for quizApp
-        //    ContentView(gameManagerVM: GameManagerVM())
+          //  ContentView(gameManagerVM: GameManagerVM())
+          //A  FirebaseApp.configure()
         }
     }
 }

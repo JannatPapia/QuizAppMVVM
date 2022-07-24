@@ -12,7 +12,7 @@ struct firebaseHome: View {
     @State var show = false
     // Storing level for fetching questions....
     @State var set = "Round_1"
-    
+//    var quizItem : [QuizModelfire]
     //For analytic
     @State var correct = 0
     @State var wrong = 0
@@ -78,7 +78,8 @@ struct firebaseHome: View {
         }
         .background(Color.black.opacity(0.05).ignoresSafeArea())
         .sheet(isPresented: $show, content: {
-            QA(correct: $correct, wrong: $wrong)
+
+            QA(correct: $correct, wrong: $wrong, answered: $answered, set: set)
         })
     }
 }
