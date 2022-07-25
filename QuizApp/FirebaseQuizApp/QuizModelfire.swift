@@ -26,40 +26,54 @@ import SwiftUI
 //     let answer : String?
 ////    let category : String?
 ////    let image: String?
-//    let sl : Int?
+////    let sl : Int?
+////
+////
+////    enum CodingKeys: String, CodingKey {
+////        case answer = "answer"
+////        case optionA = "optionA"
+////        case optionB = "optionB"
+////        case optionC = "optionC"
+////        case optionD = "optionD"
+////        case question = "qustion"
+////      //  case category = "category"
+////     //   case image = "image"
+////        case sl = "sl"
+////    }
+//    
+//   
 //
 //
-//    enum CodingKeys: String, CodingKey {
-//        case answer = "answer"
-//        case optionA = "optionA"
-//        case optionB = "optionB"
-//        case optionC = "optionC"
-//        case optionD = "optionD"
-//        case question = "qustion"
-//      //  case category = "category"
-//     //   case image = "image"
-//        case sl = "sl"
+////    import Foundation
+//
+//    // MARK: - QuestionModelElement
+//    struct QuestionModelElement:  Codable {
+//      //  var id: String { UUID().uuidString }
+//        let sl: Int
+//        let optionA, optionB, optionC, optionD: String
+//        let answer: String
+//        let question: String?
+//        
+////        enum CodingKeys: String, CodingKey {
+////               case question = "question"
+////               case optionA = "optionA"
+////               case optionB = "optionB"
+////               case optionC = "optionC"
+////               case optionD  = "optionD"
+////               case answer = "answer"
+////           }
+//       
+//
+//    enum Category: String, Codable {
+//        case alabamaDmv = "Alabama dmv"
 //    }
-    
-   
+//        
+////        var isSubmitted = false
+////        var completed = false
+//}
 
 
-//    import Foundation
-
-    // MARK: - QuestionModelElement
-    struct QuestionModelElement: Codable {
-        let sl: Int
-        let optionA, optionB, optionC, optionD: String
-        let answer: String
-        let question: String?
-
-    enum Category: String, Codable {
-        case alabamaDmv = "Alabama dmv"
-    }
-}
-
-
-struct Qustion:Identifiable, Decodable {
+struct Qustion:Identifiable, Codable {
     var id: String { UUID().uuidString }
     var question : String = ""
     var optionA : String  = ""
@@ -67,6 +81,16 @@ struct Qustion:Identifiable, Decodable {
     var optionC : String  = ""
     var optionD : String  = ""
     var answer: String  = ""
+    
+    enum CodingKeys: String, CodingKey {
+         case question = "question"
+         case optionA = "optionA"
+         case optionB = "optionB"
+         case optionC = "optionC"
+         case optionD  = "optionD"
+         case answer = "answer"
+     }
+    
   //  var image  : String = ""
     //for checking
     var isSubmitted = false
@@ -75,31 +99,31 @@ struct Qustion:Identifiable, Decodable {
 
 
 
-struct nazmul: Codable {
-  //  @DocumentID var id: String?
- //   var id: String { UUID().uuidString }
-    let question : String?
-    let optionA : String
-    let optionB : String
-    let optionC : String
-    let optionD : String
-    let answer: String
-    
-    //for checking
+//struct nazmul: Codable {
+//  //  @DocumentID var id: String?
+// //   var id: String { UUID().uuidString }
+//    let question : String?
+//    let optionA : String
+//    let optionB : String
+//    let optionC : String
+//    let optionD : String
+//    let answer: String
+//
+//    //for checking
 //    var isSubmitted = false
 //    var completed = false
-    
-//    enum Category: String, Codable {
-//        case alabamaDmv = "Alabama dmv"
+//
+////    enum Category: String, Codable {
+////        case alabamaDmv = "Alabama dmv"
+////    }
+//
+//    enum CodingKeys: String, CodingKey {
+//        case question = "question"
+//        case optionA = "optionA"
+//        case optionB = "optionB"
+//        case optionC = "optionC"
+//        case optionD  = "optionD"
+//        case answer = "answer"
 //    }
-    
-    enum CodingKeys: String, CodingKey {
-        case question = "question"
-        case optionA = "optionA"
-        case optionB = "optionB"
-        case optionC = "optionC"
-        case optionD  = "optionD"
-        case answer = "answer"
-    }
-    
-}
+//
+//}

@@ -10,9 +10,9 @@ import CoreAudio
 
 class fireQuestionViewModel:  ObservableObject {
     
-    @Published var questions = [QuestionModelElement]()
+ //   @Published var questions = [QuestionModelElement]()
 //    @Published var questions  = [nazmul]()
-//    @Published var questions1 : [Qustion] = []
+    @Published var questions : [Qustion] = []
 
     func loadData(set: String) {
 //        guard let file = Bundle.main.url(forResource: "data", withExtension: "json")
@@ -45,7 +45,7 @@ class fireQuestionViewModel:  ObservableObject {
 
               //      UserDefaults(suiteName: "group.com.shohagh.widgetvocabulary")!.set(word, forKey: "latter")
              //        var quizToOpinion = [QuestionModelElement]()
-                    let items = try JSONDecoder().decode([QuestionModelElement].self, from: data)
+                    let items = try JSONDecoder().decode([Qustion].self, from: data)
 
 //                     for item in items {
 //                         print(item.optionC)
@@ -113,3 +113,4 @@ class fireQuestionViewModel:  ObservableObject {
 
 
 //Class 'JSONDecoder' requires that 'Qustion' conform to 'Decodable'
+//Class 'JSONDecoder' requires that 'Qustion' conform to 'Decodable

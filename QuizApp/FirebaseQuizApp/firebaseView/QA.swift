@@ -23,7 +23,14 @@ struct QA: View {
                 ProgressView()
             }
             else {
-                
+                if answered == data.questions.count {
+                    VStack(spacing: 25) {
+                        Image("trophy")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 250, height: 250)
+                    }
+                }else {
                 VStack {
                     // Top Progress View...
                     ZStack(alignment: Alignment(horizontal: .leading, vertical: .center),
@@ -35,7 +42,7 @@ struct QA: View {
                         
                         Capsule()
                             .fill(Color.green)
-                            .frame(width: 100, height: 6)
+                            .frame(width: progress(), height: 6)
                     })
                     .padding()
                     
@@ -73,9 +80,14 @@ struct QA: View {
                             
                             //View....
                             fireQuestionView(question: $data.questions[index], correct: $correct, wrong: $wrong, answered: $answered)
+                            
+                            // if current question is completed means moving away...
+                                .offset(x: data.questions[index].completed ? 1000 : 0)
+                                .rotationEffect(.init(degrees: data.questions[index].completed ? 10 : 0))
                         }
                     }
                     .padding()
+                }
                 }
             }
         }
@@ -89,6 +101,16 @@ struct QA: View {
         })
         
         
+    }
+    // progress
+    
+    func progress() -> CGFloat {
+        
+        let fraction = CGFloat(answered) / CGFloat(data.questions.count)
+        
+        let width = UIScreen.main.bounds.width - 30
+        
+        return fraction * width
     }
 }
 //struct QA_Previews: PreviewProvider {

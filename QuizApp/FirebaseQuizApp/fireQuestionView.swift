@@ -13,10 +13,13 @@ import SwiftUI
 
 struct fireQuestionView: View {
     
-    @Binding var question: QuestionModelElement
+    @Binding var question: Qustion
+//    @Binding var question: QuestionModelElement
     @Binding var correct: Int
     @Binding var wrong: Int
     @Binding var answered: Int
+    
+//    @State private var isSelected = false
     // For checking......
    //    var isSubmitted = false
    //    var complete = false
@@ -25,7 +28,7 @@ struct fireQuestionView: View {
     
     var body: some View {
         VStack(spacing: 22){
-            Text(question.question!)
+            Text(question.question)
                 .font(.title2)
                 .fontWeight(.heavy)
                 .foregroundColor(Color.black)
@@ -95,10 +98,16 @@ struct fireQuestionView: View {
                 })
                 
                 // disabling
-//                .disabled(question.isSubmitted ? true : false)
-//                .opacity(question.completed ?  0.7 : 1)
+                .disabled(question.isSubmitted ? true : false)
+                .opacity(question.isSubmitted ?  0.7 : 1)
                 
-                Button(action: {}, label: {
+                Button(action: {
+                    withAnimation{
+                        question.completed.toggle()
+                        answered += 1
+                        
+                    }
+                }, label: {
                     Text("Next")
                         .fontWeight(.heavy)
                         .foregroundColor(.white)
@@ -107,8 +116,8 @@ struct fireQuestionView: View {
                         .background(Color.blue)
                         .cornerRadius(15)
                 })
-//                .disabled(question.isSubmitted ? true : false)
-//                .opacity(question.completed ? 0.7 : 1)
+                .disabled(!question.isSubmitted ? true : false)
+                .opacity(!question.isSubmitted ? 0.7 : 1)
             }
             .padding(.bottom)
         }
@@ -122,12 +131,34 @@ struct fireQuestionView: View {
     // highlighting answer
     func color(option: String) -> Color {
         if option == selected{
-            return Color.blue
+        //    if selected == question.answer{
+                
+                //displaying if correct means green else red....
+                if question.isSubmitted{
+                    
+                    if selected == question.answer{
+                        
+                        return Color.green
+                    }
+                    else {
+                        return Color.red
+                    }
+            }
+            else {
+                return Color.blue
+            }
+           
         }
         else {
+            
+            // displying right if wrong selected
+            if question.isSubmitted && option != selected {
+                if question.answer == option{return Color.green}
+            }
             return Color.gray
         }
     }
+    
     
     // check answer
     
@@ -137,11 +168,9 @@ struct fireQuestionView: View {
         } else {
             wrong += 1
         }
-//        question.isSubmitted.toggle()
-    }
-    
+        question.isSubmitted.toggle()    
 }
-
+}
 //struct fireQuestionView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        fireQuestionView()
