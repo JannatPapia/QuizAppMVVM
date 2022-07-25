@@ -29,6 +29,23 @@ struct QA: View {
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 250, height: 250)
+                        
+                        Text("Well Done !!!")
+                            .font(.title)
+                            .fontWeight(.heavy)
+                            .foregroundColor(.black)
+                        
+                        // Score and Back Home Button...
+                        
+                        HStack(spacing: 15) {
+                            Image(systemName: "checkmark")
+                                .font(.largeTitle)
+                                .foregroundColor(.green)
+                            
+                            Text("\(correct)")
+                                .font(.largeTitle)
+                                .foregroundColor(.black)
+                        }
                     }
                 }else {
                 VStack {
