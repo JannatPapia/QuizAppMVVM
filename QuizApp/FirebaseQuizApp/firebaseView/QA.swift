@@ -15,6 +15,9 @@ struct QA: View {
     var set: String
     //    var quizItem : [nazmul]
     @StateObject var data = fireQuestionViewModel()
+    
+    @Environment(\.presentationMode) var present
+    
     //   @Published var data = fireQuestionViewModel()
     var body: some View {
         //
@@ -45,7 +48,32 @@ struct QA: View {
                             Text("\(correct)")
                                 .font(.largeTitle)
                                 .foregroundColor(.black)
+                            
+                            Image(systemName: "xmark")
+                                .font(.largeTitle)
+                                .foregroundColor(.green)
+                                .padding(.leading)
+                            
+                            Text("\(wrong)")
+                                .font(.largeTitle)
+                                .foregroundColor(.black)
+                            
                         }
+                        
+                        Button(action: {
+                            // closing sheet....
+                            present.wrappedValue.dismiss()
+                        }, label: {
+                            Text("GoTo Home")
+                                .fontWeight(.heavy)
+                                .foregroundColor(.white)
+                                .padding(.vertical)
+                                .frame(width: UIScreen.main.bounds.width - 150)
+                                .background(Color.blue)
+                                .cornerRadius(15)
+                        })
+
+                        
                     }
                 }else {
                 VStack {
