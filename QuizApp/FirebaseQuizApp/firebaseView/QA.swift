@@ -13,7 +13,8 @@ struct QA: View {
     @Binding var wrong: Int
     @Binding var answered: Int
     var set: String
-    //    var quizItem : [nazmul]
+        var quizItem : [Qustion]
+    @ObservedObject var delegetStorage =  DelegetStorage()
     @StateObject var data = fireQuestionViewModel()
     
     @Environment(\.presentationMode) var present
@@ -142,7 +143,8 @@ struct QA: View {
         //        })
         // fetching
         .onAppear(perform: {
-            data.loadData(set: "")
+          //  data.loadData(set: "")
+            delegetStorage.getQuestions(set : quizItem, gameLavel : "")
         })
         
         

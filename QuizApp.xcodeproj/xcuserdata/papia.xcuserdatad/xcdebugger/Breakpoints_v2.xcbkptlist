@@ -30,9 +30,9 @@
             filePath = "QuizApp/FirebaseQuizApp/firebaseViewModel/fireQuestionViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "loadData(set:)"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "loadData(fileName:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -46,9 +46,9 @@
             filePath = "QuizApp/FirebaseQuizApp/firebaseViewModel/fireQuestionViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "loadData(set:)"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "loadData(fileName:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -62,25 +62,9 @@
             filePath = "QuizApp/FirebaseQuizApp/firebaseViewModel/fireQuestionViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "loadData(set:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "F1F9C461-59CD-4FAB-9E7D-F14FCD313540"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "QuizApp/FirebaseQuizApp/firebaseViewModel/fireQuestionViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "loadData(set:)"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "loadData(fileName:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -94,10 +78,10 @@
             filePath = "QuizApp/FirebaseQuizApp/firebaseViewModel/fireQuestionViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "loadData(set:)"
-            landmarkType = "7">
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "fireQuestionViewModel"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -110,8 +94,8 @@
             filePath = "QuizApp/FirebaseQuizApp/firebaseView/QA.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -126,26 +110,10 @@
             filePath = "QuizApp/FirebaseQuizApp/firebaseView/QA.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
             landmarkName = "body"
             landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "95B01B0C-71B3-4797-94DF-21CEB5407010"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "QuizApp/FirebaseQuizApp/firebaseViewModel/fireQuestionViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "loadData(set:)"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -158,9 +126,9 @@
             filePath = "QuizApp/FirebaseQuizApp/firebaseViewModel/fireQuestionViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
-            landmarkName = "loadData(set:)"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "loadData(fileName:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -174,8 +142,8 @@
             filePath = "QuizApp/FirebaseQuizApp/QuizModelfire.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "121"
-            endingLineNumber = "121"
+            startingLineNumber = "208"
+            endingLineNumber = "208"
             landmarkName = "unknown"
             landmarkType = "0">
             <Locations>
@@ -222,8 +190,8 @@
             filePath = "QuizApp/FirebaseQuizApp/QuizModelfire.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
+            startingLineNumber = "209"
+            endingLineNumber = "209"
             landmarkName = "unknown"
             landmarkType = "0">
          </BreakpointContent>
@@ -238,42 +206,10 @@
             filePath = "QuizApp/FirebaseQuizApp/QuizModelfire.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
+            startingLineNumber = "191"
+            endingLineNumber = "191"
             landmarkName = "unknown"
             landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A715FBEA-CD99-4900-962B-6B24880A1A57"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "QuizApp/FirebaseQuizApp/firebaseViewModel/fireQuestionViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "loadData(set:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "21DAA2E6-D643-489B-A987-0692EB5BC3C6"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "QuizApp/FirebaseQuizApp/firebaseViewModel/fireQuestionViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "loadData(set:)"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -286,8 +222,8 @@
             filePath = "QuizApp/FirebaseQuizApp/QuizModelfire.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
+            startingLineNumber = "200"
+            endingLineNumber = "200"
             landmarkName = "unknown"
             landmarkType = "0">
          </BreakpointContent>
@@ -302,8 +238,8 @@
             filePath = "QuizApp/FirebaseQuizApp/QuizModelfire.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
+            startingLineNumber = "201"
+            endingLineNumber = "201"
             landmarkName = "unknown"
             landmarkType = "0">
          </BreakpointContent>
@@ -318,8 +254,8 @@
             filePath = "QuizApp/FirebaseQuizApp/QuizModelfire.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
+            startingLineNumber = "193"
+            endingLineNumber = "193"
             landmarkName = "unknown"
             landmarkType = "0">
          </BreakpointContent>
@@ -334,40 +270,40 @@
             filePath = "QuizApp/FirebaseQuizApp/QuizModelfire.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
             landmarkName = "Qustion"
             landmarkType = "14">
             <Locations>
                <Location
-                  uuid = "E44141CB-2CB8-481D-B7DF-0A1C33AE2E21 - 46ef2cc75aea081"
+                  uuid = "E44141CB-2CB8-481D-B7DF-0A1C33AE2E21 - 60ad53c961850e13"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "QuizApp.Qustion.init() -&gt; QuizApp.Qustion"
+                  symbolName = "QuizApp.Qustion.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;QuizApp.Qustion.CodingKeys&gt;"
                   moduleName = "QuizApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/papia/Documents/QuizApp/QuizApp/FirebaseQuizApp/QuizModelfire.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "82"
-                  endingLineNumber = "82"
-                  offsetFromSymbolStart = "337">
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
+                  offsetFromSymbolStart = "76">
                </Location>
                <Location
-                  uuid = "E44141CB-2CB8-481D-B7DF-0A1C33AE2E21 - 883636c4cfbb31f9"
+                  uuid = "E44141CB-2CB8-481D-B7DF-0A1C33AE2E21 - 501df820e6edb86c"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "QuizApp.Qustion.init(from: Swift.Decoder) throws -&gt; QuizApp.Qustion"
+                  symbolName = "QuizApp.Qustion.CodingKeys.rawValue.getter : Swift.String"
                   moduleName = "QuizApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/papia/Documents/QuizApp/QuizApp/FirebaseQuizApp/QuizModelfire.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "82"
-                  endingLineNumber = "82"
-                  offsetFromSymbolStart = "371">
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
+                  offsetFromSymbolStart = "47">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -382,8 +318,8 @@
             filePath = "QuizApp/FirebaseQuizApp/QuizModelfire.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
             landmarkName = "Qustion"
             landmarkType = "14">
          </BreakpointContent>
@@ -398,8 +334,8 @@
             filePath = "QuizApp/FirebaseQuizApp/QuizModelfire.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
             landmarkName = "Qustion"
             landmarkType = "14">
             <Locations>
@@ -446,40 +382,40 @@
             filePath = "QuizApp/FirebaseQuizApp/QuizModelfire.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
             landmarkName = "Qustion"
             landmarkType = "14">
             <Locations>
                <Location
-                  uuid = "CF1BBD2F-224D-4F47-9172-C568047802E5 - 46ef2cc75aea747"
+                  uuid = "CF1BBD2F-224D-4F47-9172-C568047802E5 - 60ad53c961850e13"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "QuizApp.Qustion.init() -&gt; QuizApp.Qustion"
+                  symbolName = "QuizApp.Qustion.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;QuizApp.Qustion.CodingKeys&gt;"
                   moduleName = "QuizApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/papia/Documents/QuizApp/QuizApp/FirebaseQuizApp/QuizModelfire.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "80"
-                  endingLineNumber = "80"
-                  offsetFromSymbolStart = "199">
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
+                  offsetFromSymbolStart = "76">
                </Location>
                <Location
-                  uuid = "CF1BBD2F-224D-4F47-9172-C568047802E5 - 883636c4cfbb363f"
+                  uuid = "CF1BBD2F-224D-4F47-9172-C568047802E5 - 501df820e6edb86c"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "QuizApp.Qustion.init(from: Swift.Decoder) throws -&gt; QuizApp.Qustion"
+                  symbolName = "QuizApp.Qustion.CodingKeys.rawValue.getter : Swift.String"
                   moduleName = "QuizApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/papia/Documents/QuizApp/QuizApp/FirebaseQuizApp/QuizModelfire.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "80"
-                  endingLineNumber = "80"
-                  offsetFromSymbolStart = "293">
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
+                  offsetFromSymbolStart = "47">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -494,40 +430,40 @@
             filePath = "QuizApp/FirebaseQuizApp/QuizModelfire.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
             landmarkName = "Qustion"
             landmarkType = "14">
             <Locations>
                <Location
-                  uuid = "5BB4AF37-45E4-4F1C-82D8-EE40BE17F3A3 - 46ef2cc75aea760"
+                  uuid = "5BB4AF37-45E4-4F1C-82D8-EE40BE17F3A3 - 60ad53c961850e13"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "QuizApp.Qustion.init() -&gt; QuizApp.Qustion"
+                  symbolName = "QuizApp.Qustion.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;QuizApp.Qustion.CodingKeys&gt;"
                   moduleName = "QuizApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/papia/Documents/QuizApp/QuizApp/FirebaseQuizApp/QuizModelfire.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "81"
-                  endingLineNumber = "81"
-                  offsetFromSymbolStart = "268">
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
+                  offsetFromSymbolStart = "76">
                </Location>
                <Location
-                  uuid = "5BB4AF37-45E4-4F1C-82D8-EE40BE17F3A3 - 883636c4cfbb3618"
+                  uuid = "5BB4AF37-45E4-4F1C-82D8-EE40BE17F3A3 - 501df820e6edb86c"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "QuizApp.Qustion.init(from: Swift.Decoder) throws -&gt; QuizApp.Qustion"
+                  symbolName = "QuizApp.Qustion.CodingKeys.rawValue.getter : Swift.String"
                   moduleName = "QuizApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/papia/Documents/QuizApp/QuizApp/FirebaseQuizApp/QuizModelfire.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "81"
-                  endingLineNumber = "81"
-                  offsetFromSymbolStart = "332">
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
+                  offsetFromSymbolStart = "47">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -542,40 +478,40 @@
             filePath = "QuizApp/FirebaseQuizApp/QuizModelfire.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
             landmarkName = "Qustion"
             landmarkType = "14">
             <Locations>
                <Location
-                  uuid = "C835FBFA-0BBB-4B42-B2B4-1EF41C429CFA - 46ef2cc75aea081"
+                  uuid = "C835FBFA-0BBB-4B42-B2B4-1EF41C429CFA - 60ad53c961850e13"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "QuizApp.Qustion.init() -&gt; QuizApp.Qustion"
+                  symbolName = "QuizApp.Qustion.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;QuizApp.Qustion.CodingKeys&gt;"
                   moduleName = "QuizApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/papia/Documents/QuizApp/QuizApp/FirebaseQuizApp/QuizModelfire.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "82"
-                  endingLineNumber = "82"
-                  offsetFromSymbolStart = "337">
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
+                  offsetFromSymbolStart = "76">
                </Location>
                <Location
-                  uuid = "C835FBFA-0BBB-4B42-B2B4-1EF41C429CFA - 883636c4cfbb31f9"
+                  uuid = "C835FBFA-0BBB-4B42-B2B4-1EF41C429CFA - 501df820e6edb86c"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "QuizApp.Qustion.init(from: Swift.Decoder) throws -&gt; QuizApp.Qustion"
+                  symbolName = "QuizApp.Qustion.CodingKeys.rawValue.getter : Swift.String"
                   moduleName = "QuizApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/papia/Documents/QuizApp/QuizApp/FirebaseQuizApp/QuizModelfire.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "82"
-                  endingLineNumber = "82"
-                  offsetFromSymbolStart = "371">
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
+                  offsetFromSymbolStart = "47">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -590,8 +526,8 @@
             filePath = "QuizApp/FirebaseQuizApp/QuizModelfire.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
             landmarkName = "Qustion"
             landmarkType = "14">
          </BreakpointContent>
@@ -606,28 +542,13 @@
             filePath = "QuizApp/FirebaseQuizApp/QuizModelfire.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
             landmarkName = "Qustion"
             landmarkType = "14">
             <Locations>
                <Location
-                  uuid = "A6563373-4A9B-4164-B6E2-5545F3F286B2 - 46ef2cc75aea157"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "QuizApp.Qustion.init() -&gt; QuizApp.Qustion"
-                  moduleName = "QuizApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/papia/Documents/QuizApp/QuizApp/FirebaseQuizApp/QuizModelfire.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "96"
-                  endingLineNumber = "96"
-                  offsetFromSymbolStart = "455">
-               </Location>
-               <Location
-                  uuid = "A6563373-4A9B-4164-B6E2-5545F3F286B2 - 883636c4cfbb302f"
+                  uuid = "A6563373-4A9B-4164-B6E2-5545F3F286B2 - 883636c4cfbb3dd9"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -637,9 +558,24 @@
                   urlString = "file:///Users/papia/Documents/QuizApp/QuizApp/FirebaseQuizApp/QuizModelfire.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "96"
-                  endingLineNumber = "96"
-                  offsetFromSymbolStart = "430">
+                  startingLineNumber = "114"
+                  endingLineNumber = "114"
+                  offsetFromSymbolStart = "433">
+               </Location>
+               <Location
+                  uuid = "A6563373-4A9B-4164-B6E2-5545F3F286B2 - 2508ddaeeb38daa3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "QuizApp.Qustion.init(question: Swift.Optional&lt;Swift.String&gt;, optionA: Swift.Optional&lt;Swift.String&gt;, optionB: Swift.Optional&lt;Swift.String&gt;, optionC: Swift.Optional&lt;Swift.String&gt;, optionD: Swift.Optional&lt;Swift.String&gt;, answer: Swift.Optional&lt;Swift.String&gt;, sl: Swift.Optional&lt;Swift.Int&gt;) -&gt; QuizApp.Qustion"
+                  moduleName = "QuizApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/papia/Documents/QuizApp/QuizApp/FirebaseQuizApp/QuizModelfire.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "114"
+                  endingLineNumber = "114"
+                  offsetFromSymbolStart = "334">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -668,8 +604,8 @@
             filePath = "QuizApp/FirebaseQuizApp/firebaseView/QA.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -720,6 +656,22 @@
                   offsetFromSymbolStart = "22">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6450FB07-A639-40A4-9F2B-E79B3850219C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QuizApp/FirebaseQuizApp/ViewModelDataProces.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "addItem()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

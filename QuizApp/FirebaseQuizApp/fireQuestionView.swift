@@ -28,7 +28,7 @@ struct fireQuestionView: View {
     
     var body: some View {
         VStack(spacing: 22){
-            Text(question.question)
+            Text(question.question!)
                 .font(.title2)
                 .fontWeight(.heavy)
                 .foregroundColor(Color.black)
@@ -38,47 +38,47 @@ struct fireQuestionView: View {
             
             //Options
             
-            Button(action: {selected = question.optionA}, label: {
-                Text(question.optionA)
+            Button(action: {selected = question.optionA!}, label: {
+                Text(question.optionA!)
                     .foregroundColor(Color.black)
                     .padding()
                     .frame(maxWidth: .infinity)
                     .background(
                         RoundedRectangle(cornerRadius: 15)
-                            .stroke(color(option: question.optionA), lineWidth: 1)
+                            .stroke(color(option: question.optionA!), lineWidth: 1)
                     )
             })
             
-            Button(action: {selected = question.optionB}, label: {
-                Text(question.optionB)
+            Button(action: {selected = question.optionB!}, label: {
+                Text(question.optionB!)
                     .foregroundColor(Color.black)
                     .padding()
                     .frame(maxWidth: .infinity)
                     .background(
                         RoundedRectangle(cornerRadius: 15)
-                            .stroke(color(option: question.optionB), lineWidth: 1)
+                            .stroke(color(option: question.optionB!), lineWidth: 1)
                     )
             })
             
-            Button(action: {selected = question.optionC}, label: {
-                Text(question.optionC)
+            Button(action: {selected = question.optionC!}, label: {
+                Text(question.optionC!)
                     .foregroundColor(Color.black)
                     .padding()
                     .frame(maxWidth: .infinity)
                     .background(
                         RoundedRectangle(cornerRadius: 15)
-                            .stroke(color(option: question.optionC), lineWidth: 1)
+                            .stroke(color(option: question.optionC!), lineWidth: 1)
                     )
             })
             
-            Button(action: {selected = question.optionD}, label: {
-                Text(question.optionD)
+            Button(action: {selected = question.optionD!}, label: {
+                Text(question.optionD!)
                     .foregroundColor(Color.black)
                     .padding()
                     .frame(maxWidth: .infinity)
                     .background(
                         RoundedRectangle(cornerRadius: 15)
-                            .stroke(color(option: question.optionD), lineWidth: 1)
+                            .stroke(color(option: question.optionD!), lineWidth: 1)
                     )
             })
             

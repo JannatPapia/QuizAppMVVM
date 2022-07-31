@@ -5,49 +5,49 @@
 //  Created by Jannatun Nahar Papia on 22/7/22.
 //
 //
-//import Foundation
+import Foundation
+
 //
-////
-////  HelperDelegate.swift
-////  WordForLearn
-////
-////  Created by MacBook Air M1 on 23/7/21.
-////
+//  HelperDelegate.swift
+//  WordForLearn
 //
-//import SwiftUI
-//import AVFoundation
-//import MobileCoreServices
+//  Created by MacBook Air M1 on 23/7/21.
 //
-//
-//class DelegetStorage : ObservableObject {
-//
-//    var resut = 0
-//
-//
-//    @Published var wish : Bool = false
-//
-//    var sound: AVAudioPlayer!
-//
-//
-//    @Published var questions : [FirebaseQuestion] = []
-//
-//    func getQuestions(set : [QuizModelfire], gameLavel : String){
-//
-//        for item in set {
-//            //swape= ...
-//            var postions = [item.optionA ?? "",item.optionB ?? "",item.optionC ?? ""]
-//
-//            print("postion \(postions)")
-//
-//            postions.shuffle()
-//
-//            questions.append(FirebaseQuestion(question: item.question ?? "" , optionA: postions[0], optionB:  postions[1], optionC:  postions[2], optionD:  item.optionD ?? "", answer:  item.answer ?? ""))
-//        }
-//
-//
-//        questions.reverse()
-//    }
-//
+
+import SwiftUI
+import AVFoundation
+import MobileCoreServices
+
+
+class DelegetStorage : ObservableObject {
+
+    var resut = 0
+
+
+    @Published var wish : Bool = false
+
+    var sound: AVAudioPlayer!
+
+
+    @Published var questions : [Qustion2] = []
+
+    func getQuestions(set : [Qustion], gameLavel : String){
+
+        for item in set {
+            //swape= ...
+            var postions = [item.optionA ?? "",item.optionB ?? "",item.optionC ?? ""]
+
+            print("postion \(postions)")
+
+            postions.shuffle()
+
+            questions.append(Qustion2(question: item.question ?? "" , optoinA: postions[0], optoinB:  postions[1], optoinC:  postions[2], optoinD:  item.optionD ?? "", answer:  item.answer ?? ""))
+        }
+
+
+        questions.reverse()
+    }
+}
 //
 //    func progress(answered : Int) -> CGFloat {
 //        let fraction = CGFloat(answered) /  CGFloat(questions.count)
@@ -89,48 +89,48 @@
 //        }
     
     
-//    func saveItem(tite: String,subtitle : String ,content : String , wordFocus : String ){
+   // func saveItem(tite: String,subtitle : String ,content : String , wordFocus : String ){
+
+//        let scene = UIApplication.shared.connectedScenes.first
+//        if let sd : SceneDelegate = (scene?.delegate as? SceneDelegate) {
+//           var viewContext = sd.persistenceController.container.viewContext
 //
-////        let scene = UIApplication.shared.connectedScenes.first
-////        if let sd : SceneDelegate = (scene?.delegate as? SceneDelegate) {
-////           var viewContext = sd.persistenceController.container.viewContext
+//            let newItem = Favourite(context: viewContext)
+//        newItem.title = tite
+//        newItem.chipTitle = wordFocus //modelProcess.footnote
+//        newItem.id = UUID()
+//        newItem.subTitle = subtitle
+//        newItem.referenceId = ""
+//        newItem.datetime = Date()
+//        newItem.content = content
+//          //  TStorageAlex.wordFocus = wordFocus
+//           do {
+//                try viewContext.save()
+//                print("Order saved.")
+//           // isPresented = false
+//            } catch {
+//                print(error.localizedDescription)
+//            }
+//        }
+
+
+   // }
+//
+//    func delyLife(isCorrect : Bool = false , level : String,mood:String) {
+////      //  counter = 30
+////        if isCorrect {
+//////            correct += 1
 ////
-////            let newItem = Favourite(context: viewContext)
-////        newItem.title = tite
-////        newItem.chipTitle = wordFocus //modelProcess.footnote
-////        newItem.id = UUID()
-////        newItem.subTitle = subtitle
-////        newItem.referenceId = ""
-////        newItem.datetime = Date()
-////        newItem.content = content
-////          //  TStorageAlex.wordFocus = wordFocus
-////           do {
-////                try viewContext.save()
-////                print("Order saved.")
-////           // isPresented = false
-////            } catch {
-////                print(error.localizedDescription)
-////            }
+////        }else{
+//////            wrong += 1
+//////            self.isCorrect = false
+////            playSound(filename:"correct" )
 ////        }
 //
 //
-//    }
 //
-//    func delyLife(isCorrect : Bool = false , level : String,mood:String) {
-//      //  counter = 30
-//        if isCorrect {
-////            correct += 1
 //
-//        }else{
-////            wrong += 1
-////            self.isCorrect = false
-//            playSound(filename:"correct" )
-//        }
-
-        
-      //  if correct + wrong == 10 {
-            
-           
+//
 //            if correct > 6 {
 //                var star = "⭐"
 //
@@ -149,15 +149,15 @@
 //                self.correct = 0
 //                self.wrong = 0
 //            }
-               // lavel =  getMathLavel()
-         
+//      //          lavel =  getMathLavel()
+//
 //    }
-    
-   
-
-
-    
-   
+//
+//
+//
+//
+//
+//
 //
 //    @Published var counter = 30
 //    @Published var timer = Timer()
@@ -187,11 +187,11 @@
     
  
 
-    
+//
 //    func RelaodMath(){
 //
 //    }
-    
+//
 //    // called every time interval from the timer
 //      @objc  func timerAction() {
 //            counter -= 1
@@ -202,8 +202,8 @@
 //
 //          countDonwResult = "\(String(format: "%02d", counter))"
 //        }
-
-
+//
+//}
 
 
 //struct Img : Identifiable {

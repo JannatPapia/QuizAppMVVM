@@ -43,6 +43,7 @@
 		379E63CB288ACAAB0067C11A /* QuestionVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379E63CA288ACAAB0067C11A /* QuestionVM.swift */; };
 		37A23D2E2882BE8000976A3F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37A23D2D2882BE8000976A3F /* GoogleService-Info.plist */; };
 		37A23D312882DBC100976A3F /* FirebaseQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A23D302882DBC100976A3F /* FirebaseQuestion.swift */; };
+		37A7246528941B5F0046AA15 /* Configfire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A7246428941B5F0046AA15 /* Configfire.swift */; };
 		37B1896E28818B70000A3411 /* SwiftQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B1896D28818B70000A3411 /* SwiftQuestion.swift */; };
 		37B189702881B23B000A3411 /* BottomText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B1896F2881B23B000A3411 /* BottomText.swift */; };
 		37B189722881BABC000A3411 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B189712881BABC000A3411 /* MainTabView.swift */; };
@@ -88,6 +89,7 @@
 		379E63CA288ACAAB0067C11A /* QuestionVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionVM.swift; sourceTree = "<group>"; };
 		37A23D2D2882BE8000976A3F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		37A23D302882DBC100976A3F /* FirebaseQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseQuestion.swift; sourceTree = "<group>"; };
+		37A7246428941B5F0046AA15 /* Configfire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configfire.swift; sourceTree = "<group>"; };
 		37B1896D28818B70000A3411 /* SwiftQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftQuestion.swift; sourceTree = "<group>"; };
 		37B1896F2881B23B000A3411 /* BottomText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomText.swift; sourceTree = "<group>"; };
 		37B189712881BABC000A3411 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
@@ -286,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				37C94968288A8B4A00743F9F /* fireQuestionViewModel.swift */,
+				37A7246428941B5F0046AA15 /* Configfire.swift */,
 			);
 			path = firebaseViewModel;
 			sourceTree = "<group>";
@@ -390,6 +393,7 @@
 				375E9D982879989200A76022 /* Trivia.swift in Sources */,
 				3727773F287964FC0031B47D /* Extension.swift in Sources */,
 				37277736287812040031B47D /* QuizCompletedView.swift in Sources */,
+				37A7246528941B5F0046AA15 /* Configfire.swift in Sources */,
 				375E9D9228797D9600A76022 /* Answer.swift in Sources */,
 				375E9D8D287969EC00A76022 /* QuestionView.swift in Sources */,
 				3727773D28795E0C0031B47D /* TriviaContentView.swift in Sources */,
