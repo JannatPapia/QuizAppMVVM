@@ -10,41 +10,16 @@ import CoreAudio
 
 class fireQuestionViewModel:  ObservableObject {
     
- //   @Published var questions = [QuestionModelElement]()
-//    @Published var questions  = [nazmul]()
+    @Published var selectedIndexOfItem = String()
+    
+    @Published var set = BIoMenViewModel()
+    
     @Published var questions : [Qustion] = []
 
     func loadData(set: String) {
-//        guard let file = Bundle.main.url(forResource: "data", withExtension: "json")
-//            else {
-//                return
-//            }
-//        do {
-//
-//            let data = try Data(contentsOf: file)
-//            let recievedData = try JSONDecoder().decode([Qustion].self, from: data)
-//
-//            self.questions1 = recievedData
-//
-//            DispatchQueue.main.async {
-//                self.questions = data.compactMap({ (doc) -> nazmul? in
-//                    return try? doc.data(as: nazmul.self)
-//                })
-//            }
-//            print(self.questions)
-//        }
-//        catch {
-//            print("Error while decoding json")
-//        }
-//
              do {
                  if let file = Bundle.main.path(forResource:"data", ofType: "json") {
                            let data = try Data(contentsOf: URL(fileURLWithPath: file), options: .mappedIfSafe)
-             //        let _posts = try? JSONDecoder().decode([QuestionModelElement].self, from: data)
-                     //try Data(contentsOf: file)
-
-              //      UserDefaults(suiteName: "group.com.shohagh.widgetvocabulary")!.set(word, forKey: "latter")
-             //        var quizToOpinion = [QuestionModelElement]()
                     let items = try JSONDecoder().decode([Qustion].self, from: data)
 
 //                     for item in items {

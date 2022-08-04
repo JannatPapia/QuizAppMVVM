@@ -153,7 +153,75 @@
     "optionD": "You may park here for 15 minutes or less.",
     "answer": "The space is reserved for parking for persons with disabilities whose vehicles have special plates or placards.",
     "image": ""
+  },
+  
+  {
+    "sl": 15,
+    "category": "Alabama dmv",
+    "question": "Driving along the rear side of another vehicle is:",
+    "optionA": "A good defensive technique for avoiding the other driver's blind spot.",
+    "optionB": "A good way to draft off the other vehicle.",
+    "optionC": "An effective way to maintain a space cushion on your left side.",
+    "optionD": "Dangerous because you are probably in one of the other vehicle's blind spots.",
+    "answer": "Dangerous because you are probably in one of the other vehicle's blind spots.",
+    "image": ""
+  },
+  {
+    "sl": 16,
+    "category": "Alabama dmv",
+    "question": "The posted speed limit on a road is 55 mph. When this road is wet:",
+    "optionA": "Drive 5 to 10 mph under the speed limit.",
+    "optionB": "Maintain a speed of 55 mph.",
+    "optionC": "Drive 20 to 25 mph under the speed limit.",
+    "optionD": "Test your brakes frequently.",
+    "answer": "Drive 5 to 10 mph under the speed limit.",
+    "image": ""
+  },
+  {
+    "sl": 17,
+    "category": "Alabama dmv",
+    "question": "You are traveling on a freeway posted for 65 mph, but traffic is heavy and moving at just 35 mph. The best speed for your vehicle is:",
+    "optionA": "35 mph",
+    "optionB": "30 mph.",
+    "optionC": "25 mph.",
+    "optionD": "20 mph.",
+    "answer": "25 mph.",
+    "image": ""
+  },
+  {
+    "sl": 18,
+    "category": "Alabama dmv",
+    "question": "What does this sign mean?",
+    "optionA": "Pay attention to traffic coming from the left",
+    "optionB": "Slow down and look both ways",
+    "optionC": "Turn around if possible",
+    "optionD": "Traffic travels one way only",
+    "answer": "Traffic travels one way only",
+    "image": "oneway10"
+  },
+  {
+    "sl": 19,
+    "category": "Alabama dmv",
+    "question": "A blue traffic sign marks:",
+    "optionA": "A warning",
+    "optionB": "Construction",
+    "optionC": "Motorist services",
+    "optionD": "Direction",
+    "answer": "Motorist services",
+    "image": ""
+  },
+  {
+    "sl": 20,
+    "category": "Alabama dmv",
+    "question": "This warning sign indicates",
+    "optionA": "merge to your left",
+    "optionB": "traffic in both directions ahead",
+    "optionC": "median ahead",
+    "optionD": "a divided highway ends",
+    "answer": "a divided highway ends",
+    "image": "sign15"
   }
+
   ]
 
 

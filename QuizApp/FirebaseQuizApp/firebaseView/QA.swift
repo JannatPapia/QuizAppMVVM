@@ -13,6 +13,8 @@ struct QA: View {
     @Binding var wrong: Int
     @Binding var answered: Int
     var set: String
+    
+    var quizItem : [Qustion]
     //    var quizItem : [nazmul]
     @StateObject var data = fireQuestionViewModel()
     
