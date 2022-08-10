@@ -16,7 +16,7 @@ struct QA: View {
     
     var quizItem : [Qustion]
     //    var quizItem : [nazmul]
-    @StateObject var data = fireQuestionViewModel()
+    @StateObject var viewModel = fireQuestionViewModel()
     
     @Environment(\.presentationMode) var present
     
@@ -24,11 +24,11 @@ struct QA: View {
     var body: some View {
         //
         ZStack {
-            if data.questions.isEmpty {
+            if viewModel.questions.isEmpty {
                 ProgressView()
             }
             else {
-                if answered == data.questions.count {
+                if answered == viewModel.questions.count {
                     VStack(spacing: 25) {
                         Image("trophy")
                             .resizable()
@@ -123,17 +123,17 @@ struct QA: View {
                     //  Spacer(minLength: 0)
                     
                     ZStack {
-                        ForEach(data.questions.reversed().indices) { index in
+                        ForEach(viewModel.questions.reversed().indices) { index in
                             
                             //View....
-                            fireQuestionView(question: $data.questions[index], correct: $correct, wrong: $wrong, answered: $answered)
+                            fireQuestionView(question: $viewModel.questions[index], correct: $correct, wrong: $wrong, answered: $answered)
                             
                             // if current question is completed means moving away...
-                                .offset(x: data.questions[index].completed ? 1000 : 0)
-                                .rotationEffect(.init(degrees: data.questions[index].completed ? 10 : 0))
+                                .offset(x: viewModel.questions[index].completed ? 1000 : 0)
+                                .rotationEffect(.init(degrees: viewModel.questions[index].completed ? 10 : 0))
                         }
                     }
-                    .padding()
+                    .padding([.leading,.trailing],5)
                 }
                 }
             }
@@ -143,17 +143,17 @@ struct QA: View {
         //            data.getQuestions(set : quizItem, gameLavel : "")
         //        })
         // fetching
-        .onAppear(perform: {
-            data.loadData(set: "")
-        })
-        
+//        .onAppear(perform: {
+//            viewModel.loadData(set: "")
+//              })
+    
         
     }
     // progress
     
     func progress() -> CGFloat {
         
-        let fraction = CGFloat(answered) / CGFloat(data.questions.count)
+        let fraction = CGFloat(answered) / CGFloat(viewModel.questions.count)
         
         let width = UIScreen.main.bounds.width - 30
         

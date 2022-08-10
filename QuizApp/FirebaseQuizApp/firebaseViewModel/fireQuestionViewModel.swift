@@ -6,7 +6,20 @@
 //
 
 import SwiftUI
-import CoreAudio
+//import CoreAudio
+
+struct BIoMenViewModel {
+var set = Int()
+var rewardDOnem = Bool()
+var title = String()
+var subtitle = String()
+var isQuiz = Bool()
+var optionChosed = 0
+var storeManager = Bool()
+var showingActionSheet = Bool()
+var show = Bool()
+var showOnbrodingScreen = Bool()
+}
 
 class fireQuestionViewModel:  ObservableObject {
     
@@ -16,7 +29,7 @@ class fireQuestionViewModel:  ObservableObject {
     
     @Published var questions : [Qustion] = []
 
-    func loadData(set: String) {
+    func loadData(set :  String) {
              do {
                  if let file = Bundle.main.path(forResource:"data", ofType: "json") {
                            let data = try Data(contentsOf: URL(fileURLWithPath: file), options: .mappedIfSafe)

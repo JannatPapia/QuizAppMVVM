@@ -4,8 +4,70 @@
 //
 //  Created by Jannatun Nahar Papia on 22/7/22.
 //
-//
-//import Foundation
+import SwiftUI
+
+
+struct HMView: View {
+    @StateObject var viewModel = fireQuestionViewModel()
+    @State var set = "Round_1"
+    var quizItem : [Qustion]
+    //For analytic
+    @State var correct = 0
+    @State var wrong = 0
+    @State var answered = 0
+    @State var show = false
+    
+    func getDestination(itemText: String) -> AnyView {
+        
+    
+        let currentRound =   HomeGrid.eachRoundQuiz * Int(viewModel.selectedIndexOfItem)!
+        
+        if viewModel.set.isQuiz{
+            return AnyView(QA(correct: $correct, wrong: $wrong, answered: $answered, set: viewModel.selectedIndexOfItem, quizItem: Array(viewModel.questions[(currentRound - HomeGrid.eachRoundQuiz)..<currentRound])))
+//            return AnyView(QA(set: viewModel.selectedIndexOfItem,correct: $correct, quizItem: Array( viewModel.questions[(currentRound - HomeGrid.eachRoundQuiz)..<currentRound])))
+        }else{
+            return AnyView(getDestination(itemText: "nazmul"))
+            
+       //     return AnyView(LearingView(isAnxiety: $viewModel.set.show, trival: Array( viewModel.itemOpinions[(currentRound - HomeGrid.eachRoundQuiz)..<currentRound]), set: viewModel.selectedIndexOfItem, bg: [QUIZConfig.mainBackgroundImage]))
+        }
+    }
+    
+    var body: some View {
+ScrollView{
+    ZStack{
+        VStack{
+            
+       //     Spacer(minLength: 10)
+            firebaseHome()
+//                .sheet(isPresented: $show, content: {
+//             
+//                         QA(correct: $correct, wrong: $wrong, answered: $answered, set: set, quizItem: [])
+//                     })
+            
+          //  firebaseHome(show: $show, viewModel: viewModel, set: <#T##String#>, correct: <#T##Int#>, wrong: <#T##Int#>, answered: <#T##Int#>)
+            
+            
+            Spacer(minLength: 0)
+                .padding()
+        }
+                .onAppear(perform: {
+                    viewModel.loadData(set :  "")
+
+
+                })
+        .onLoad(perform: {  // swift life cycle
+            viewModel.set.isQuiz = true //
+            viewModel.loadData(set :  "")
+        })
+
+        .fullScreenCover(isPresented: $viewModel.set.show, content:{
+            getDestination(itemText: viewModel.selectedIndexOfItem)
+        })
+    }
+}
+}
+}
+
 //
 ////
 ////  HelperDelegate.swift

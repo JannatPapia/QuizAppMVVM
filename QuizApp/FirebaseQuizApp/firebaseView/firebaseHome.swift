@@ -6,35 +6,36 @@
 //
 
 import SwiftUI
+//import OnLoad
 
 struct firebaseHome: View {
     
     @State var show = false
-    @ObservedObject var viewModel = fireQuestionViewModel()
+    @StateObject var viewModel = fireQuestionViewModel()
     // Storing level for fetching questions....
     @State var set = "Round_1"
-//    var quizItem : [QuizModelfire]
-    //For analytic
+  //   var quizItem : [Qustion]
+//    //For analytic
     @State var correct = 0
     @State var wrong = 0
     @State var answered = 0
     
     
     
-    func getDestination(itemText: String) -> AnyView {
-        
-    
-        let currentRound =   HomeGrid.eachRoundQuiz * Int(viewModel.selectedIndexOfItem)!
-        
-        if viewModel.set.isQuiz{
-            return AnyView(QA(correct: $correct, wrong: $wrong, answered: $answered, set: viewModel.selectedIndexOfItem, quizItem: Array(viewModel.questions[(currentRound - HomeGrid.eachRoundQuiz)..<currentRound])))
-//            return AnyView(QA(set: viewModel.selectedIndexOfItem,correct: $correct, quizItem: Array( viewModel.questions[(currentRound - HomeGrid.eachRoundQuiz)..<currentRound])))
-        }else{
-            return AnyView(getDestination(itemText: "nazmul"))
-            
-       //     return AnyView(LearingView(isAnxiety: $viewModel.set.show, trival: Array( viewModel.itemOpinions[(currentRound - HomeGrid.eachRoundQuiz)..<currentRound]), set: viewModel.selectedIndexOfItem, bg: [QUIZConfig.mainBackgroundImage]))
-        }
-    }
+//    func getDestination(itemText: String) -> AnyView {
+//
+//
+//        let currentRound =   HomeGrid.eachRoundQuiz * Int(viewModel.selectedIndexOfItem)!
+//
+//        if viewModel.set.isQuiz{
+//            return AnyView(QA(correct: $correct, wrong: $wrong, answered: $answered, set: viewModel.selectedIndexOfItem, quizItem: Array(viewModel.questions[(currentRound - HomeGrid.eachRoundQuiz)..<currentRound])))
+////            return AnyView(QA(set: viewModel.selectedIndexOfItem,correct: $correct, quizItem: Array( viewModel.questions[(currentRound - HomeGrid.eachRoundQuiz)..<currentRound])))
+//        }else{
+//            return AnyView(getDestination(itemText: "nazmul"))
+//
+//       //     return AnyView(LearingView(isAnxiety: $viewModel.set.show, trival: Array( viewModel.itemOpinions[(currentRound - HomeGrid.eachRoundQuiz)..<currentRound]), set: viewModel.selectedIndexOfItem, bg: [QUIZConfig.mainBackgroundImage]))
+//        }
+//    }
     
 //    var set = Int()
     
@@ -69,6 +70,7 @@ struct firebaseHome: View {
                           
                           
                           FreshCellView(image: HomeGrid.getImageRound(index: index, isQuiz: true))
+                      //        .frame(height: 150)
                           
 //                          Image("lv\(index)")
 //                              .resizable()
@@ -83,39 +85,70 @@ struct firebaseHome: View {
                           Text("Level \(index)")
                               .foregroundColor(Color.black)
                       }
+
                           
-                      .padding()
-                      .frame(maxWidth: .infinity)
-                      .background(Color.white)
-                      .cornerRadius(15)
-                      // opening QA view as sheet...
+                          
+//                      .padding()
+//                      .frame(maxWidth: .infinity)
+//                      .background(Color.white)
+//                      .cornerRadius(15)
+                          
+                      //MARK: opening QA view as sheet... QA view mane prottek ta level er view akta akta kore open kore
+                          
                       .onTapGesture {
                         //  set = "Round_\(index)"
                           set = "\(index + 1)"
                           if viewModel.questions.count == 0 {
-                              viewModel.loadData(set: "")
-                              
+                              viewModel.loadData(set : "")
+
                           }
                           show.toggle()
                       }
+                          
                   }
+                  
+
+                      .padding()
+                      .frame(maxWidth: .infinity)
+                      .background(Color.white)
+                      .cornerRadius(15)
+                  
 //                Text("Placeholder")
 //                Text("Placeholder")
             }/*@END_MENU_TOKEN*/)
+            
               .padding()
             
             Spacer(minLength: 0)
         }
+        // MARK: Loading json data from data folder
+        .onAppear(perform: {
+            viewModel.loadData(set :  "")
+
+
+        })
+//        .onAppear{
+//            viewModel.set.isQuiz = true
+//           //study when it's called
+//        }
+//        .onDisappear(perform: {
+//            //study when it's called
+//            print("ContentView disappeared!")
+//        })
+        // study when onload called and how to use onload on swiftui project where apple not provide any function. how to implement it custom onload for swiftui view https://stackoverflow.com/questions/56496359/swiftui-view-viewdidload
+        
+        
+        
 //        .onLoad(perform: {  // swift life cycle
 //            viewModel.set.isQuiz = true //
-//         //   viewModel.addItem()
+//            viewModel.loadData(set : quizItem, gameLavel : "")
 ////            viewModel.addAnxietyDepration()
 ////            viewModel.requestIDFA()
 //        })
-        
-        .fullScreenCover(isPresented: $viewModel.set.show, content:{
-            getDestination(itemText: viewModel.selectedIndexOfItem)
-        })
+//
+//        .fullScreenCover(isPresented: $viewModel.set.show, content:{
+//            getDestination(itemText: viewModel.selectedIndexOfItem)
+//        })
         
         
         .background(Color.black.opacity(0.05).ignoresSafeArea())
@@ -124,6 +157,23 @@ struct firebaseHome: View {
             QA(correct: $correct, wrong: $wrong, answered: $answered, set: set, quizItem: [])
         })
         
+        
+//        .onLoad(perform: {  // swift life cycle
+//            viewModel.set.isQuiz = true //
+//            viewModel.loadData(set : "")
+////            viewModel.addAnxietyDepration()
+////            viewModel.requestIDFA()
+//        })
+//        
+//        .fullScreenCover(isPresented: $viewModel.set.show, content:{
+//            getDestination(itemText: viewModel.selectedIndexOfItem)
+//        })
+//                .onLoad(perform: {  // swift life cycle
+//                    viewModel.set.isQuiz = true //
+//                 //   viewModel.addItem()
+//        //            viewModel.addAnxietyDepration()
+//        //            viewModel.requestIDFA()
+//                })
     }
 }
 
@@ -205,16 +255,16 @@ struct FreshCellView : View {
 
 
 
-struct BIoMenViewModel {
-
-     var set = Int()
-     var rewardDOnem = Bool()
-     var title = String()
-     var subtitle = String()
-     var isQuiz = Bool()
-     var optionChosed = 0
-     var storeManager = Bool()
-     var showingActionSheet = Bool()
-     var show = Bool()
-     var showOnbrodingScreen = Bool()
-   }
+//struct BIoMenViewModel {
+//
+//     var set = Int()
+//     var rewardDOnem = Bool()
+//     var title = String()
+//     var subtitle = String()
+//     var isQuiz = Bool()
+//     var optionChosed = 0
+//     var storeManager = Bool()
+//     var showingActionSheet = Bool()
+//     var show = Bool()
+//     var showOnbrodingScreen = Bool()
+//   }
