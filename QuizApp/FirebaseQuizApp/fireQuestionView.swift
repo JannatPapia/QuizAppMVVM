@@ -14,7 +14,6 @@ import SwiftUI
 struct fireQuestionView: View {
     
     @Binding var question: Qustion
-//    @Binding var question: QuestionModelElement
     @Binding var correct: Int
     @Binding var wrong: Int
     @Binding var answered: Int
@@ -28,6 +27,7 @@ struct fireQuestionView: View {
     
     var body: some View {
         VStack(spacing: 22){
+            // FOR QUESTION....
             Text(question.question)
                 .font(.title2)
                 .fontWeight(.heavy)
@@ -36,7 +36,7 @@ struct fireQuestionView: View {
             
             Spacer(minLength: 0)
             
-            //Options
+            //FOR OPTIONS....A
             
             Button(action: {selected = question.optionA}, label: {
                 Text(question.optionA)
@@ -49,6 +49,8 @@ struct fireQuestionView: View {
                     )
             })
             
+            //FOR OPTIONS....B
+            
             Button(action: {selected = question.optionB}, label: {
                 Text(question.optionB)
                     .foregroundColor(Color.black)
@@ -60,6 +62,8 @@ struct fireQuestionView: View {
                     )
             })
             
+            //FOR OPTIONS....C
+            
             Button(action: {selected = question.optionC}, label: {
                 Text(question.optionC)
                     .foregroundColor(Color.black)
@@ -70,6 +74,8 @@ struct fireQuestionView: View {
                             .stroke(color(option: question.optionC), lineWidth: 1)
                     )
             })
+            
+            //FOR OPTIONS....D
             
             Button(action: {selected = question.optionD}, label: {
                 Text(question.optionD)
@@ -84,9 +90,12 @@ struct fireQuestionView: View {
             
             Spacer(minLength: 0)
             
-            //Buttons
+            //Buttons use for submitted answer And Next Question use with HStack...
             
             HStack(spacing: 15) {
+                
+            //    Buttons use for submitted answer
+                
                 Button(action: checkAns, label: {
                     Text("Submit")
                         .fontWeight(.heavy)
@@ -101,11 +110,12 @@ struct fireQuestionView: View {
                 .disabled(question.isSubmitted ? true : false)
                 .opacity(question.isSubmitted ?  0.7 : 1)
                 
+                // For next question Button....
+                
                 Button(action: {
                     withAnimation{
                         question.completed.toggle()
                         answered += 1
-                        
                     }
                 }, label: {
                     Text("Next")
@@ -128,11 +138,10 @@ struct fireQuestionView: View {
         .shadow(color: Color.black.opacity(0.05), radius: 5, x: -5, y: -5)
     }
     
-    // highlighting answer
+    //MARK: highlighting answer use color
     func color(option: String) -> Color {
         if option == selected{
         //    if selected == question.answer{
-                
                 //displaying if correct means green else red....
                 if question.isSubmitted{
                     
@@ -147,7 +156,6 @@ struct fireQuestionView: View {
             else {
                 return Color.blue
             }
-           
         }
         else {
             
@@ -159,8 +167,7 @@ struct fireQuestionView: View {
         }
     }
     
-    
-    // check answer
+    //MARK: check right or wrong answer
     
     func checkAns() {
         if selected == question.answer {

@@ -22,11 +22,12 @@ struct QA: View {
     
     //   @Published var data = fireQuestionViewModel()
     var body: some View {
-        //
+        // MARK: question jodi empty thake tahole progress view show korbe
         ZStack {
             if viewModel.questions.isEmpty {
                 ProgressView()
             }
+            // MARK: Otherwise jei result ashbe je koyta hoyese sei result show korbe
             else {
                 if answered == viewModel.questions.count {
                     VStack(spacing: 25) {
@@ -40,7 +41,7 @@ struct QA: View {
                             .fontWeight(.heavy)
                             .foregroundColor(.black)
                         
-                        // Score and Back Home Button...
+                        //MARK: Score and Back Home Button...
                         
                         HStack(spacing: 15) {
                             Image(systemName: "checkmark")
@@ -79,7 +80,7 @@ struct QA: View {
                     }
                 }else {
                 VStack {
-                    // Top Progress View...
+                    //MARK: Top Progress View...
                     ZStack(alignment: Alignment(horizontal: .leading, vertical: .center),
                            content: {
                         
@@ -91,9 +92,9 @@ struct QA: View {
                             .fill(Color.green)
                             .frame(width: progress(), height: 6)
                     })
-                    .padding()
+                    .padding([.leading,.trailing,.top],10)
                     
-                    // Correct and Wrong count....
+                    //MARK: Correct and Wrong count....
                     HStack{
                         Label(
                             title: { Text(correct == 0 ? "" : "\(correct)")
@@ -118,14 +119,14 @@ struct QA: View {
                             })
                         
                     }
-                    .padding()
+                    .padding([.leading,.trailing,.top],10)
                     
                     //  Spacer(minLength: 0)
                     
                     ZStack {
                         ForEach(viewModel.questions.reversed().indices) { index in
                             
-                            //View....
+                            // MARK: View question answer and options....
                             fireQuestionView(question: $viewModel.questions[index], correct: $correct, wrong: $wrong, answered: $answered)
                             
                             // if current question is completed means moving away...
@@ -138,18 +139,14 @@ struct QA: View {
                 }
             }
         }
-        //
-        //        .onAppear(perform: {
-        //            data.getQuestions(set : quizItem, gameLavel : "")
-        //        })
         // fetching
-//        .onAppear(perform: {
-//            viewModel.loadData(set: "")
-//              })
+        .onAppear(perform: {
+            viewModel.loadData(set: "")
+              })
     
         
     }
-    // progress
+    // MARK: progress answer
     
     func progress() -> CGFloat {
         

@@ -27,6 +27,7 @@ class fireQuestionViewModel:  ObservableObject {
     
     @Published var set = BIoMenViewModel()
     
+    //MARK: Create instance for Question Model
     @Published var questions : [Qustion] = []
 
     func loadData(set :  String) {

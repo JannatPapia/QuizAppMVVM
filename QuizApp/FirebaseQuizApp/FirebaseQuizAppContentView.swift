@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct FirebaseQuizAppContentView: View {
+    
     var body: some View {
         firebaseHome()
     }
