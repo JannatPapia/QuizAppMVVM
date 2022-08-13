@@ -84,7 +84,7 @@ struct firebaseHome: View {
                               .fontWeight(.heavy)
                               .foregroundColor(Color.black)
                           
-                          Text("Level \(index)")
+                          Text("Level \(index + 1)")
                               .foregroundColor(Color.black)
                       }
                       .padding()
