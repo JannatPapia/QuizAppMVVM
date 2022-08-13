@@ -6,11 +6,14 @@
 //
 
 import SwiftUI
+import StoreKit
 
 struct FirebaseQuizAppContentView: View {
+    @StateObject var viewModel = fireQuestionViewModel()
+
     
     var body: some View {
-        firebaseHome()
+        firebaseHome(viewModel: viewModel)
     }
 }
 

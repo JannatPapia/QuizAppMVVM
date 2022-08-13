@@ -17,7 +17,7 @@ var isQuiz = Bool()
 var optionChosed = 0
 var storeManager = Bool()
 var showingActionSheet = Bool()
-var show = Bool()
+var show = false
 var showOnbrodingScreen = Bool()
 }
 

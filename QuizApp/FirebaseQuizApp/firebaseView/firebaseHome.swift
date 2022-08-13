@@ -11,7 +11,7 @@ import SwiftUI
 struct firebaseHome: View {
     
     @State var show = false
-    @StateObject var viewModel = fireQuestionViewModel()
+    @State var viewModel : fireQuestionViewModel //create instance for questionViewModel
     // Storing level for fetching questions....
     @State var set = "Round_1"
  //    var quizItem : [Qustion]
@@ -19,26 +19,28 @@ struct firebaseHome: View {
     @State var correct = 0
     @State var wrong = 0
     @State var answered = 0
+  
     
-    
-    
+//
     func getDestination(itemText: String) -> AnyView {
 
 
         let currentRound =   HomeGrid.eachRoundQuiz * Int(viewModel.selectedIndexOfItem)!
 
         if viewModel.set.isQuiz{
+          //  return AnyView(QA(correct: $correct, wrong: $wrong, answered: $answered, set: "", quizItem: []))
             return AnyView(QA(correct: $correct, wrong: $wrong, answered: $answered, set: viewModel.selectedIndexOfItem, quizItem: Array(viewModel.questions[(currentRound - HomeGrid.eachRoundQuiz)..<currentRound])))
-//            return AnyView(QA(set: viewModel.selectedIndexOfItem,correct: $correct, quizItem: Array( viewModel.questions[(currentRound - HomeGrid.eachRoundQuiz)..<currentRound])))
         }else{
-            return AnyView(getDestination(itemText: "nazmul"))
+            return AnyView(QA(correct: $correct, wrong: $wrong, answered: $answered, set: viewModel.selectedIndexOfItem, quizItem: Array(viewModel.questions[(currentRound - HomeGrid.eachRoundQuiz)..<currentRound])))
+        //    return AnyView(QA(correct: $correct, wrong: $wrong, answered: $answered, set: "", quizItem: []))
 
-       //     return AnyView(LearingView(isAnxiety: $viewModel.set.show, trival: Array( viewModel.itemOpinions[(currentRound - HomeGrid.eachRoundQuiz)..<currentRound]), set: viewModel.selectedIndexOfItem, bg: [QUIZConfig.mainBackgroundImage]))
+//            return AnyView(QA(set: viewModel.selectedIndexOfItem,correct: $correct, quizItem: Array( viewModel.questions[(currentRound - HomeGrid.eachRoundQuiz)..<currentRound])))
         }
     }
     
     
     var body: some View {
+        ScrollView {
         ZStack {
         VStack{
             
@@ -55,7 +57,7 @@ struct firebaseHome: View {
                 .padding(.top, 8)
                 .multilineTextAlignment(.center)
             
-            Spacer(minLength: 0)
+       //     Spacer(minLength: 0)
             
             // Level view
             
@@ -70,7 +72,7 @@ struct firebaseHome: View {
                           
                           
                           FreshCellView(image: HomeGrid.getImageRound(index: index, isQuiz: true))
-                      //        .frame(height: 150)
+                             .frame(height: 150)
                           
 //                          Image("lv\(index)")
 //                              .resizable()
@@ -93,13 +95,22 @@ struct firebaseHome: View {
                       //MARK: opening QA view as sheet... QA view mane prottek ta level er view akta akta kore open kore
                           
                       .onTapGesture {
-                        //  set = "Round_\(index)"
-                          set = "\(index + 1)"
+                          viewModel.selectedIndexOfItem = "\(index + 1)"
+
                           if viewModel.questions.count == 0 {
                               viewModel.loadData(set : "")
                           }
-                          show.toggle()
+                          viewModel.set.show.toggle()
                       }
+                          
+//                      .onTapGesture {
+//                        //  set = "Round_\(index)"
+//                          set = "\(index + 1)"
+//                          if viewModel.questions.count == 0 {
+//                              viewModel.loadData(set : "")
+//                          }
+//                          show.toggle()
+//                      }
                   }
 //                      .padding()
 //                      .frame(maxWidth: .infinity)
@@ -107,16 +118,29 @@ struct firebaseHome: View {
 //                      .cornerRadius(15)
 //                Text("Placeholder")
 //                Text("Placeholder")
-            }/*@END_MENU_TOKEN*/)
+              }/*@END_MENU_TOKEN*/
+              )
             
-              .padding()
-            
-            Spacer(minLength: 0)
         }
-        // MARK: Loading json data from data folder
         .onAppear(perform: {
             viewModel.loadData(set :  "")
         })
+//        .onLoad(perform: {  // swift life cycle
+//                      viewModel.set.isQuiz = true //
+//                      viewModel.loadData(set: "")
+//                  })
+//
+//                  .fullScreenCover(isPresented: $viewModel.set.show, content:{
+//                      getDestination(itemText: viewModel.selectedIndexOfItem)
+//                  })
+//              .padding()
+//
+//            Spacer(minLength: 0)
+  //      }
+        // MARK: Loading json data from data folder
+//        .onAppear(perform: {
+//            viewModel.loadData(set :  "")
+//        })
 //        .onAppear{
 //            viewModel.set.isQuiz = true
 //           //study when it's called
@@ -129,7 +153,7 @@ struct firebaseHome: View {
         
 //        .onLoad(perform: {  // swift life cycle
 //            viewModel.set.isQuiz = true //
-////            viewModel.loadData(set : "")
+//            viewModel.loadData(set : "")
 ////            viewModel.addAnxietyDepration()
 ////            viewModel.requestIDFA()
 //        })
@@ -140,24 +164,23 @@ struct firebaseHome: View {
         
         
         .background(Color.black.opacity(0.05).ignoresSafeArea())
-        .sheet(isPresented: $show, content: {
-
-            QA(correct: $correct, wrong: $wrong, answered: $answered, set: set, quizItem: [])
-        })
+//        .sheet(isPresented: viewModel.set.show, content: {
+//
+//            QA(correct: $correct, wrong: $wrong, answered: $answered, set: viewModel.selectedIndexOfItem, quizItem: [])
+//
+//        })
 //        .onAppear(perform: {
 //            viewModel.loadData(set :  "")
 //        })
         
 //        .onLoad(perform: {  // swift life cycle
 //            viewModel.set.isQuiz = true //
-//  //          viewModel.loadData(set : "")
-////            viewModel.addAnxietyDepration()
-////            viewModel.requestIDFA()
+//            viewModel.loadData(set : "")
 //        })
-//        
-        .fullScreenCover(isPresented: $viewModel.set.show, content:{
-            getDestination(itemText: viewModel.selectedIndexOfItem)
-        })
+
+//        .fullScreenCover(isPresented: $viewModel.set.show, content:{
+//            getDestination(itemText: viewModel.selectedIndexOfItem)
+//        })
 //                .onLoad(perform: {  // swift life cycle
 //                    viewModel.set.isQuiz = true //
 //                 //   viewModel.addItem()
@@ -165,9 +188,19 @@ struct firebaseHome: View {
 //        //            viewModel.requestIDFA()
 //                })
         }
+        
+//                .onLoad(perform: {  // swift life cycle
+//                    viewModel.set.isQuiz = true //
+//                    viewModel.loadData(set : "")
+//                })
+//
+//                .fullScreenCover(isPresented: $viewModel.set.show, content:{
+//                    getDestination(itemText: viewModel.selectedIndexOfItem)
+//                })
 //        .onAppear(perform: {
 //            viewModel.loadData(set :  "")
 //        })
+        }
     }
 }
 

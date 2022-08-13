@@ -139,7 +139,7 @@ struct QA: View {
                 }
             }
         }
-        // fetching
+      //   fetching
         .onAppear(perform: {
             viewModel.loadData(set: "")
               })

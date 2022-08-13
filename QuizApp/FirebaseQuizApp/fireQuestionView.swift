@@ -41,7 +41,7 @@ struct fireQuestionView: View {
             Button(action: {selected = question.optionA}, label: {
                 Text(question.optionA)
                     .foregroundColor(Color.black)
-                    .padding()
+                    .padding([.horizontal,.vertical],5)
                     .frame(maxWidth: .infinity)
                     .background(
                         RoundedRectangle(cornerRadius: 15)
@@ -54,7 +54,7 @@ struct fireQuestionView: View {
             Button(action: {selected = question.optionB}, label: {
                 Text(question.optionB)
                     .foregroundColor(Color.black)
-                    .padding()
+                    .padding([.horizontal,.vertical],5)
                     .frame(maxWidth: .infinity)
                     .background(
                         RoundedRectangle(cornerRadius: 15)
@@ -67,7 +67,7 @@ struct fireQuestionView: View {
             Button(action: {selected = question.optionC}, label: {
                 Text(question.optionC)
                     .foregroundColor(Color.black)
-                    .padding()
+                    .padding([.horizontal,.vertical],5)
                     .frame(maxWidth: .infinity)
                     .background(
                         RoundedRectangle(cornerRadius: 15)
@@ -80,7 +80,7 @@ struct fireQuestionView: View {
             Button(action: {selected = question.optionD}, label: {
                 Text(question.optionD)
                     .foregroundColor(Color.black)
-                    .padding()
+                    .padding([.horizontal,.vertical],5)
                     .frame(maxWidth: .infinity)
                     .background(
                         RoundedRectangle(cornerRadius: 15)
@@ -130,6 +130,7 @@ struct fireQuestionView: View {
                 .opacity(!question.isSubmitted ? 0.7 : 1)
             }
             .padding(.bottom)
+            
         }
         .padding()
         .background(Color.white)

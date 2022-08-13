@@ -81,12 +81,13 @@ struct HomeGrid {
     static let round = 4
     
     static func getImageRound(index : Int, isQuiz : Bool) -> String {
-        if isQuiz {
+//        isQuiz = "lv\(index + 1)"
+        if isQuiz  {
             return "lv\(index + 1)"
         }else{
             return "lv\(index + 4)"
         }
-    }
+   }
 }
 
 
