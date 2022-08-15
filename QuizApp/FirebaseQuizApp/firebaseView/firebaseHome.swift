@@ -10,32 +10,31 @@ import SwiftUI
 
 struct firebaseHome: View {
     
-    @State var show = false
-    @State var viewModel : fireQuestionViewModel //create instance for questionViewModel
+  //  @State var show = false
+    @StateObject var viewModel : fireQuestionViewModel //create instance for questionViewModel
     // Storing level for fetching questions....
     @State var set = "Round_1"
  //    var quizItem : [Qustion]
 //    //For analytic
-    @State var correct = 0
-    @State var wrong = 0
-    @State var answered = 0
-  
-    
+//    @State var correct = 0
+//    @State var wrong = 0
+//    @State var answered = 0
 //
     func getDestination(itemText: String) -> AnyView {
 
-
         let currentRound =   HomeGrid.eachRoundQuiz * Int(viewModel.selectedIndexOfItem)!
 
-        if viewModel.set.isQuiz{
-          //  return AnyView(QA(correct: $correct, wrong: $wrong, answered: $answered, set: "", quizItem: []))
-            return AnyView(QA(correct: $correct, wrong: $wrong, answered: $answered, set: viewModel.selectedIndexOfItem, quizItem: Array(viewModel.questions[(currentRound - HomeGrid.eachRoundQuiz)..<currentRound])))
-        }else{
-            return AnyView(QA(correct: $correct, wrong: $wrong, answered: $answered, set: viewModel.selectedIndexOfItem, quizItem: Array(viewModel.questions[(currentRound - HomeGrid.eachRoundQuiz)..<currentRound])))
-        //    return AnyView(QA(correct: $correct, wrong: $wrong, answered: $answered, set: "", quizItem: []))
+        if viewModel.set.isQuiz {
+          //  return AnyView(QA(correct: correct, wrong: wrong, answered: answered, set: "", quizItem: []))
+            return AnyView(QA(set: viewModel.selectedIndexOfItem, quizItem: Array(viewModel.questions[(currentRound - HomeGrid.eachRoundQuiz)..<currentRound])))
+         //   return AnyView(QA(correct: correct, wrong: wrong, answered: answered, set: viewModel.selectedIndexOfItem, quizItem: Array(viewModel.questions[(currentRound - HomeGrid.eachRoundQuiz)..<currentRound])))
+        }//else{
+          //  return AnyView(QA(correct: correct, wrong: wrong, answered: answered, set: viewModel.selectedIndexOfItem, quizItem: Array(viewModel.questions[(currentRound - HomeGrid.eachRoundQuiz)..<currentRound])))
+        //    return AnyView(QA(correct: correct, wrong: wrong, answered: answered, set: "", quizItem: []))
+        return AnyView(getDestination(itemText: "Nazmul...Loading..."))
 
 //            return AnyView(QA(set: viewModel.selectedIndexOfItem,correct: $correct, quizItem: Array( viewModel.questions[(currentRound - HomeGrid.eachRoundQuiz)..<currentRound])))
-        }
+ //       }
     }
     
     
@@ -43,13 +42,13 @@ struct firebaseHome: View {
         ScrollView {
         ZStack {
         VStack{
-            
+            // MARK: Title....
             Text("Revel Station")
                 .font(.system(size: 38))
                 .fontWeight(.heavy)
                 .foregroundColor(.purple)
                 .padding(.top)
-            
+            // MARK: SUb Title
             Text("Choose the way \nyou play !!!")
                 .font(.title2)
                 .fontWeight(.heavy)
@@ -59,18 +58,13 @@ struct firebaseHome: View {
             
        //     Spacer(minLength: 0)
             
-            // Level view
-            
+            //MARK: Level view...
          //   LazyVGrid(columns: [GridItem(.fixed(20))], content: {
               LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 20), count: 2), spacing: 35, content: {
-                  
-                  // four levels..
+                  //MARK: four levels..
                 //  ForEach(1...4, id: \.self) { index in
                       ForEach(0..<HomeGrid.round,id:\.self){ index in
-                      
                       VStack(spacing: 15) {
-                          
-                          
                           FreshCellView(image: HomeGrid.getImageRound(index: index, isQuiz: true))
                              .frame(height: 150)
                           
@@ -100,9 +94,10 @@ struct firebaseHome: View {
                           if viewModel.questions.count == 0 {
                               viewModel.loadData(set : "")
                           }
+                      //    show.toggle()//
                           viewModel.set.show.toggle()
                       }
-                          
+//
 //                      .onTapGesture {
 //                        //  set = "Round_\(index)"
 //                          set = "\(index + 1)"
@@ -110,6 +105,7 @@ struct firebaseHome: View {
 //                              viewModel.loadData(set : "")
 //                          }
 //                          show.toggle()
+//                     //     viewModel.set.show.toggle()
 //                      }
                   }
 //                      .padding()
@@ -122,17 +118,17 @@ struct firebaseHome: View {
               )
             
         }
-        .onAppear(perform: {
-            viewModel.loadData(set :  "")
-        })
-//        .onLoad(perform: {  // swift life cycle
-//                      viewModel.set.isQuiz = true //
-//                      viewModel.loadData(set: "")
-//                  })
-//
-//                  .fullScreenCover(isPresented: $viewModel.set.show, content:{
-//                      getDestination(itemText: viewModel.selectedIndexOfItem)
-//                  })
+//        .onAppear(perform: {
+//            viewModel.loadData(set :  "")
+//        })
+        .onLoad(perform: {  // swift life cycle
+                      viewModel.set.isQuiz = true //
+                      viewModel.loadData(set: "")
+                  })
+
+                  .fullScreenCover(isPresented: $viewModel.set.show, content:{
+                      getDestination(itemText: viewModel.selectedIndexOfItem)
+                  })
 //              .padding()
 //
 //            Spacer(minLength: 0)
@@ -166,7 +162,7 @@ struct firebaseHome: View {
         .background(Color.black.opacity(0.05).ignoresSafeArea())
 //        .sheet(isPresented: viewModel.set.show, content: {
 //
-//            QA(correct: $correct, wrong: $wrong, answered: $answered, set: viewModel.selectedIndexOfItem, quizItem: [])
+//            QA(correct: correct, wrong: wrong, answered: answered, set: viewModel.selectedIndexOfItem, quizItem: [])
 //
 //        })
 //        .onAppear(perform: {

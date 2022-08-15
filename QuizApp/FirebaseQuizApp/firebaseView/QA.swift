@@ -9,14 +9,14 @@ import SwiftUI
 
 // question Answer View...
 struct QA: View {
-    @Binding var correct: Int
-    @Binding var wrong: Int
-    @Binding var answered: Int
+    @State var correct: Int = 0
+    @State var wrong: Int = 0
+    @State var answered: Int = 0
     var set: String
     
     var quizItem : [Qustion]
     //    var quizItem : [nazmul]
-    @StateObject var viewModel = fireQuestionViewModel()
+    @ObservedObject var viewModel = fireQuestionViewModel()
     
     @Environment(\.presentationMode) var present
     

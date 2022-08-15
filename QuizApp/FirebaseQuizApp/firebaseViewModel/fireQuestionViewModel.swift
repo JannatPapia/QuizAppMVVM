@@ -23,9 +23,9 @@ var showOnbrodingScreen = Bool()
 
 class fireQuestionViewModel:  ObservableObject {
     
-    @Published var selectedIndexOfItem = String()
+    @Published var selectedIndexOfItem = String() 
     
-    @Published var set = BIoMenViewModel()
+    @Published var set = BIoMenViewModel() // instance for BIoMenViewModel
     
     //MARK: Create instance for Question Model
     @Published var questions : [Qustion] = []
