@@ -13,7 +13,11 @@ struct FirebaseQuizAppContentView: View {
 
     
     var body: some View {
-        firebaseHome(viewModel: viewModel)
+        HomeView(viewModel: viewModel)
+//            .onAppear(perform: {
+//                  viewModel.getQuestions(set: quizItem , gameLavel : "")
+//              })
+       // firebaseHome(viewModel: viewModel)
     }
 }
 

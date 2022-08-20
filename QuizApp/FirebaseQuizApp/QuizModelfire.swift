@@ -81,6 +81,7 @@ struct Qustion:Identifiable, Codable {
     var optionC : String  = ""
     var optionD : String  = ""
     var answer: String  = ""
+    var sl : Int?
     
     enum CodingKeys: String, CodingKey {
          case question = "question"

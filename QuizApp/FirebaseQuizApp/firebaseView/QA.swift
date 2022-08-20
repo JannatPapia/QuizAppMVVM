@@ -9,13 +9,14 @@ import SwiftUI
 
 // question Answer View...
 struct QA: View {
+    //outgoing
     @State var correct: Int = 0
     @State var wrong: Int = 0
     @State var answered: Int = 0
-    var set: String
     
+    //Incomming
+    var set: String
     var quizItem : [Qustion]
-    //    var quizItem : [nazmul]
     @ObservedObject var viewModel = fireQuestionViewModel()
     
     @Environment(\.presentationMode) var present
@@ -141,7 +142,8 @@ struct QA: View {
         }
       //   fetching
         .onAppear(perform: {
-            viewModel.loadData(set: "")
+            viewModel.getQuestions(set: quizItem, gameLavel: "")
+       //     viewModel.loadData(set: "")
               })
     
         
